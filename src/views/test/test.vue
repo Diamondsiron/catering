@@ -3,15 +3,17 @@
    <mt-datetime-picker
    ref="picker"
   v-model="pickerVisible"
+  :startDate="old"
   type="date"
-  year-format="{value} 年"
-  month-format="{value} 月"
-  date-format="{value} 日">
+  year-format="2018 年"
+  month-format="3 月"
+  date-format="30 日">
 </mt-datetime-picker>
   <div @click="handleClick()">
 111
   </div>
-  <input type="date">
+   <flat-pickr v-model="date"></flat-pickr>
+ 
    <div style="width:100%;height:450px;border:#ccc solid 1px;" id="allmap"></div>
 </div>
   
@@ -20,6 +22,8 @@
 <script>
 import { DatetimePicker } from 'mint-ui';
 import { Toast } from 'mint-ui';
+import flatPickr from 'vue-flatpickr-component';
+  import 'flatpickr/dist/flatpickr.css';
 
 export default{
   name:'test',
@@ -27,14 +31,21 @@ export default{
     return{
       visible:{},
       value:{},
-      pickerVisible:''
+      pickerVisible:'',
+       date: null, 
     }
   },
   components:{
-   
+     flatPickr
+  },
+  computed:{
+    old:()=>{
+      let date = new Date("1900/01/01");
+      return date;
+    }
   },
   mounted () {
-      this.initMap();
+     // this.initMap();
   },
   methods:{
     
@@ -43,6 +54,8 @@ export default{
        this.$refs.picker.open();
     },
      openPicker() {
+       
+    
         this.$refs.picker.open();
     },
      initMap(){

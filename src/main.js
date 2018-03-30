@@ -8,6 +8,9 @@ import iView from 'iview'
 import 'iview/dist/styles/iview.css';
 import Mint from 'mint-ui';
 import 'mint-ui/lib/style.css'
+import flatPickr from 'vue-flatpickr-component';
+import 'flatpickr/dist/flatpickr.css';
+Vue.use(flatPickr);
 
 
 Vue.config.productionTip = false
