@@ -28,8 +28,9 @@ footer{
  position: fixed;
  display: flex;
   bottom: 0px;
-  height: 60px;
+  height: 50px;
   width: 100%;
+  
   background-color: royalblue;
   justify-content:center;
    align-items:center;

@@ -32,21 +32,62 @@
       </div>
       <div class="col-right">
          <ul>
-          <li @click="showMeal()">
-            <img src="static/1.jpg" alt="">
-            <div>描述</div>
+          <li >
+            <img src="static/1.jpg" alt="" @click="showMeal()">
+            <div>
+              <span class="rol-1">
+                ￥48.00
+              </span>
+             
+             <span class="rol-0">
+               <button>减少</button>
+               <input type="text" placeholder="0" style="width:30px"/>
+               <button>增加</button>
+             </span>
+            </div>
           </li>
-          <li @click="showMeal()">
-            <img src="static/1.jpg" alt="">
-            <div>描述</div>
+          <li>
+            <img src="static/1.jpg" alt="" @click="showMeal()">
+             <div>
+              <span class="rol-1">
+                ￥48.00
+              </span>
+             
+             <span class="rol-0">
+               <button>减少</button>
+               <input type="text" placeholder="0" style="width:30px"/>
+               <button>增加</button>
+             </span>
+            </div>
+
           </li>
-          <li @click="showMeal()">
-            <img src="static/1.jpg" alt="">
-            <div>描述</div>
+          <li>
+            <img src="static/1.jpg" alt=""  @click="showMeal()" >
+             <div>
+              <span class="rol-1">
+                ￥48.00
+              </span>
+             
+             <span class="rol-0">
+               <button>减少</button>
+               <input type="text" placeholder="0" style="width:30px"/>
+               <button>增加</button>
+             </span>
+            </div>
           </li>
-          <li @click="showMeal()">
-            <img src="static/1.jpg" alt="">
-            <div>描述</div>
+          <li >
+            <img src="static/1.jpg" alt="" @click="showMeal()">
+             <div>
+              <span class="rol-1">
+                ￥48.00
+              </span>
+             
+             <span class="rol-0">
+               <button>减少</button>
+               <input type="text" placeholder="0" style="width:30px"/>
+               <button>增加</button>
+             </span>
+            </div>
           </li>
         </ul>
 
@@ -128,6 +169,16 @@ header{
 }
 .col-right>ul>li>img{
   width:100%;
+}
+.col-right div{
+  text-align: left;
+  display:flex;
+}
+.rol-1{
+  flex: 1;
+}
+.rol-0{
+  flex: 0 0 120px;
 }
 li{
   list-style: none

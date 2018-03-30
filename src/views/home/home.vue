@@ -24,7 +24,7 @@
     <div class="logout">
       <span><a href="javascript:void(0)">退出登录</a></span>
     </div>
-    
+     <Tabs></Tabs>
   </div>
   
 </template>

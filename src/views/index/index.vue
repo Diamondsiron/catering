@@ -4,31 +4,39 @@
       <div class="bar-banner">
          <Carousel v-model="value1" loop>
             <CarouselItem>
-                <div class="demo-carousel">1</div>
+                <div class="demo-carousel">
+                  <img src="static/1.jpg" alt="">
+                </div>
             </CarouselItem>
             <CarouselItem>
-                <div class="demo-carousel">2</div>
+                <div class="demo-carousel">
+                  <img src="static/1.jpg" alt="">
+                </div>
             </CarouselItem>
             <CarouselItem>
-                <div class="demo-carousel">3</div>
+                <div class="demo-carousel">
+                  <img src="static/1.jpg" alt="">
+                </div>
             </CarouselItem>
             <CarouselItem>
-                <div class="demo-carousel">4</div>
+                <div class="demo-carousel">
+                  <img src="static/1.jpg" alt="">
+                </div>
             </CarouselItem>
         </Carousel>
       </div>
       <div class="bar-index-quick-nav">
           <div class="col">
-            1
+            排餐
           </div>
           <div class="col">
-           2
+           同楼拼餐
           </div>
           <div class="col">
-            3
+            邀请好友
           </div>
           <div class="col">
-            4
+            充值
           </div>
       </div>
     </div>

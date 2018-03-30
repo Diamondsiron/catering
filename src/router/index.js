@@ -5,6 +5,8 @@ import appointment from '@/views/appointment/appointment.vue'
 import index from '@/views/index/index.vue'
 import indent from '@/views/indent/indent.vue'
 import meal from '@/views/meal/meal.vue'
+import login from '@/views/login/login.vue'
+import test from '@/views/test/test.vue'
 
 Vue.use(Router)
 
@@ -40,6 +42,16 @@ export default new Router({
       path: '/meal',
       name: 'meal',
       component: meal
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: login
+    },
+    {
+      path: '/test',
+      name: 'test',
+      component: test
     },
   ]
 })

@@ -6,20 +6,20 @@
         <span>详情</span>
       </div>
       <div>
-        <table>
+        <table class="w100" border="0" >
            <tbody>
             <tr>
               <th>
-                1
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
               </th>
               <th>
-                2
+                早餐
               </th>
               <th>
-                3
+                午餐
               </th>
               <th>
-                4
+                晚餐
               </th>
             </tr>
           </tbody>
@@ -30,20 +30,20 @@
 
     </div>
     <div class="arrange-table">
-      <table>
+      <table class="w100">
           <tbody>
             <tr>
               <td>
-                1
+              0329
               </td>
               <td>
-                2
+                已约满
               </td>
               <td>
-                3
+                已约满
               </td>
               <td>
-                4
+                已约满
               </td>
             </tr>
           </tbody>
@@ -64,8 +64,14 @@ export default{
 .arrange-header{
   width: 100%;
   position: fixed;
+    top: 0;
+ 
 }
-arrange-table{
+.arrange-table{
   width: 100%;
+  margin-top: 80px;
+}
+.w100{
+  width:100%
 }
 </style>
