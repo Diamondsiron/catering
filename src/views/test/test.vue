@@ -5,9 +5,9 @@
   v-model="pickerVisible"
   :startDate="old"
   type="date"
-  year-format="2018 年"
-  month-format="3 月"
-  date-format="30 日">
+  year-format="{value}年"
+  month-format="{value}月"
+  date-format="{value}日">
 </mt-datetime-picker>
   <div @click="handleClick()">
 111

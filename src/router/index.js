@@ -10,11 +10,12 @@ import test from '@/views/test/test.vue'
 
 Vue.use(Router)
 
-export default new Router({
+export const router= new Router({
   routes: [
     {
       path:'/',
       redirect:'/index'
+     
     },
     {
       path: '/index',
@@ -55,3 +56,12 @@ export default new Router({
     },
   ]
 })
+
+router.beforeEach((to,from,next)=>{
+  //全局守卫判断跳转 实际场景是增加对404或者需要登录的也面进行判断
+  //console.log("你过来呀")
+  next(true);
+})
+router.afterEach((to) => {
+ // console.log("我过来了")
+});
