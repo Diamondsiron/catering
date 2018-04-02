@@ -79,12 +79,16 @@
             <Col span="8">图片三</Col>
         </Row>
     </div>
+    <div @click="promise()">跨域访问</div>
+    
+     
     <Tabs></Tabs>
     
   
   </div>
 </template>
 <script>
+import axios from 'axios';
 export default{
   name:'index',
   data () {
@@ -94,6 +98,29 @@ export default{
         },
   components:{
    'Tabs': () => import('@/components/common/tabs.vue'),
+  },
+  methods:{
+     promise(){
+       var date=new Date();
+      var timer=date.getTime().toString();
+      axios.get("api"+'?'+timer).then(function(res){
+          console.log(res.data.msg);
+          return res
+        })
+    },
+    
+    async(){
+
+    },
+    ajax(){
+      return new Promise(function(resolve, reject){
+          resolve(axios.get("api"+'?t='+timer).then(function(res){
+          console.log(res.data.msg);
+          return res
+        }))
+      })
+    }
+
   }
 
 }

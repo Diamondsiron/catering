@@ -13,7 +13,20 @@ const mutations = {
 }
 
 const actions = {
+  promise(){
+    let promise  = new Promise(function(resolve,reject){
+      resolve(axios.get("http://hope.s1.natapp.cc/wx/createVueMenu").then(function(res){
+        console.log(res);
+        return res
+      }))
+    })
+  },
+  generator(){
 
+  },
+  async(){
+
+  }
 }
 
 export default new Vuex.Store({

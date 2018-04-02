@@ -32,7 +32,17 @@ module.exports = {
     // set this to false - it *may* help
     // https://vue-loader.vuejs.org/en/options.html#cachebusting
     cacheBusting: true,
-
+    //跨域访问开始
+    proxyTable: {
+      '/api':{
+          target:'http://hope.s1.natapp.cc/wx/createVueMenu',
+          changeOrigin: true,
+          pathRewrite: {
+            '^/api': ''
+          }
+      }
+    },
+    //跨越访问结束
     cssSourceMap: true
   },
 

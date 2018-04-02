@@ -12,7 +12,8 @@
   <div @click="handleClick()">
 111
   </div>
-   <flat-pickr v-model="date"></flat-pickr>
+  <datebar></datebar>
+  
  
    <div style="width:100%;height:450px;border:#ccc solid 1px;" id="allmap"></div>
 </div>
@@ -36,7 +37,8 @@ export default{
     }
   },
   components:{
-     flatPickr
+     flatPickr,
+     'datebar': () => import('@/components/common/datebar.vue'),
   },
   computed:{
     old:()=>{
