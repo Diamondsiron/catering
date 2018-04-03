@@ -1,6 +1,6 @@
 <template>
   <div>
-    邀请五位好友用餐，即可再获得30元优惠
+    积分
   </div>
   
 </template>

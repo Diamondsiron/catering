@@ -1,13 +1,14 @@
 <template>
   <div>
-    邀请五位好友用餐，即可再获得30元优惠
+    剩余套餐
   </div>
   
 </template>
 <script>
-  export default{
+export default{
 
-  }
+}
+  
 </script>
 <style scoped>
 
