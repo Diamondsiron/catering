@@ -13,7 +13,7 @@
     <div class="login-main">
       <form action="">
         <input type="text" placeholder="手机号码">
-        <input type="text" placeholder="密码">
+        <input type="password" placeholder="密码">
         <button type="submit">登录</button>
 
       </form>

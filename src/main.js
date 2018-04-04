@@ -3,20 +3,21 @@
 import Vue from 'vue'
 import App from './App'
 import {router} from './router/index.js'
+import {routers} from './router/router.js'
 import store from './store'
 import iView from 'iview'
 import 'iview/dist/styles/iview.css';
-import Mint from 'mint-ui';
-import 'mint-ui/lib/style.css'
-import flatPickr from 'vue-flatpickr-component';
-import 'flatpickr/dist/flatpickr.css';
+import MuseUI from 'muse-ui'
+import 'muse-ui/dist/muse-ui.css'
 
-Vue.use(flatPickr);
+
+
 
 
 Vue.config.productionTip = false
 Vue.use(iView);
-Vue.use(Mint);
+Vue.use(MuseUI);
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

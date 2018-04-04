@@ -5,20 +5,45 @@
     </div>
     <ul class="user-list">
       <li>
-        <a href="javascript:void(0)">邀请好友</a>
+         <router-link :to="{ path: '/activity'}" >活动</router-link>
       </li>
-      <li>
-        <a href="javascript:void(0)">同楼拼餐</a>
+       <li>
+         <router-link :to="{ path: '/address'}" >地址</router-link>
       </li>
-      <li>
-        <a href="javascript:void(0)">电话</a>
+       <li>
+         <router-link :to="{ path: '/charge'}" >余额</router-link>
       </li>
-      <li>
-        <a href="javascript:void(0)">余额</a>
+       <li>
+         <router-link :to="{ path: '/coupon'}" >优惠券</router-link>
       </li>
-      <li>
-        <a href="javascript:void(0)">积分</a>
+       <li>
+         <router-link :to="{ path: '/groupmeal'}" >团餐</router-link>
       </li>
+       <li>
+         <router-link :to="{ path: '/history'}" >订餐历史</router-link>
+      </li>
+       <li>
+         <router-link :to="{ path: '/information'}" >个人信息</router-link>
+      </li>
+       <li>
+         <router-link :to="{ path: '/integral'}" >积分</router-link>
+      </li>
+       <li>
+         <router-link :to="{ path: '/Invitation'}" >分享</router-link>
+      </li>
+       <li>
+         <router-link :to="{ path: '/order'}" >订单</router-link>
+      </li>
+       <li>
+         <router-link :to="{ path: '/pwd'}" >修改密码</router-link>
+      </li>
+       <li>
+         <router-link :to="{ path: '/remaining'}" >剩余套餐</router-link>
+      </li>
+        <li>
+         <router-link :to="{ path: '/wx'}" >微信认证</router-link>
+      </li>
+
 
     </ul>
     <div class="logout">
@@ -86,6 +111,9 @@ li{
     background: #fff;
     line-height: 42px;
     font-size: 14px;
+}
+a{
+  color: black;
 }
 
 </style>

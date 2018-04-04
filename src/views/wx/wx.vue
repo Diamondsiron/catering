@@ -44,7 +44,7 @@ export default {
     Oauth2() {
       var appid = 'wxe3f3353093e3438e';
       var scope = 'snsapi_userinfo';
-      var redirect_uri = encodeURI('http://kxy5mw.natappfree.cc/test');
+      var redirect_uri = encodeURI('http://kxy5mw.natappfree.cc/wx');
       var oauth2_url = `http://hope.s1.natapp.cc/wx/getWXCode?appid=${appid}&scope=${scope}&state=Hope&redirect_uri=${redirect_uri}`;
       window.location.href = oauth2_url;
     },
