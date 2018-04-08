@@ -18,6 +18,11 @@ import order from '@/views/order/order.vue'
 import pwd from '@/views/pwd/pwd.vue'
 import remaining from '@/views/remaining/remaining.vue'
 import wx from '@/views/wx/wx.vue'
+import Oauth from '@/views/Oauth/Oauth.vue'
+import list1 from '@/views/list/list1.vue'
+import list2 from '@/views/list/list2.vue'
+import list3 from '@/views/list/list3.vue'
+import list4 from '@/views/list/list4.vue'
 
 
 
@@ -160,6 +165,31 @@ export const appRouter = [
     path: '/wx',
     name: 'wx',
     component: wx
+  },
+  {
+    path: '/Oauth',
+    name: 'Oauth',
+    component: Oauth
+  },
+  {
+    path: '/list1',
+    name: 'list1',
+    component: list1
+  },
+  {
+    path: '/list2',
+    name: 'list2',
+    component: list2
+  },
+  {
+    path: '/list3',
+    name: 'list3',
+    component: list3
+  },
+  {
+    path: '/list4',
+    name: 'list4',
+    component: list4
   }
 ];
 
