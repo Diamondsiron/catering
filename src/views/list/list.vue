@@ -1,15 +1,67 @@
 <template>
   <div>
+    <header>
+      <span class="col-0">图标</span>
+      <span class="col-1">安心套餐</span>
+    </header>
+    <div>
+      <ul>
+        <li v-for="item in list" :key="item">
+          <div class="row">
+            <div class="col-1"> 1</div>
+            <div class="col-1"> 
+              <div>
+                  2
+              </div>
+              <div>
+                  3
+              </div>
+
+            </div>
+            
+          </div>
+         
+        </li>
+      </ul>
+    </div>
    
   </div>
 </template>
 <script>
 export default{
+  data(){
+    return{
+      list:[1,2,3,4]
+    }
+  },
+  methods:{
+
+  }
   
+
 }
   
 </script>
 <style scoped>
+header{
+  display: flex;
+  background-color: aqua;
+  height: 40px;
+}
+.col-0{
+  flex:0,0,40px
+}
+.col-1{
+  flex: 1;
+  margin: 10px;
+  background-color: aqua
+}
+li{
+  list-style: none;
+}
+.row{
+  display: flex
+}
 
 </style>
 

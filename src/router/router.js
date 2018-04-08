@@ -3,6 +3,7 @@ import appointment from '@/views/appointment/appointment.vue'
 import index from '@/views/index/index.vue'
 import indent from '@/views/indent/indent.vue'
 import meal from '@/views/meal/meal.vue'
+import mealdetail from '@/views/mealDetail/mealDetail.vue'
 import login from '@/views/login/login.vue'
 import test from '@/views/test/test.vue'
 import activity from '@/views/activity/activity.vue'
@@ -15,6 +16,8 @@ import information from '@/views/information/information.vue'
 import integral from '@/views/integral/integral.vue'
 import Invitation from '@/views/Invitation/Invitation.vue'
 import order from '@/views/order/order.vue'
+import orderform from '@/views/orderForm/orderForm.vue'
+import orderdetail from '@/views/orderDetail/orderDetail.vue'
 import pwd from '@/views/pwd/pwd.vue'
 import remaining from '@/views/remaining/remaining.vue'
 import wx from '@/views/wx/wx.vue'
@@ -103,6 +106,11 @@ export const appRouter = [
     component: meal
   },
   {
+    path: '/mealdetail',
+    name: 'mealdetail',
+    component: mealdetail
+  },
+  {
     path: '/test',
     name: 'test',
     component: test
@@ -156,6 +164,16 @@ export const appRouter = [
     path: '/order',
     name: 'order',
     component: order
+  },
+  {
+    path: '/orderform',
+    name: 'orderform',
+    component: orderform
+  },
+  {
+    path: '/orderdetail',
+    name: 'orderdetail',
+    component: orderdetail
   },
   {
     path: '/pwd',
