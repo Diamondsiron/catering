@@ -4,14 +4,7 @@
             
               <router-link :to="{ path: '/index'}"  slot="header">首页</router-link>
             </div>
-            <div class="col">
-             
-              <router-link :to="{ path: '/indent'}"  slot="header">订餐</router-link>
-            </div>
-            <div class="col">
-              
-              <router-link :to="{ path: '/appointment'}"  slot="header">预约</router-link>
-            </div>
+           
             <div class="col">
               
               <router-link :to="{ path: '/home'}"  slot="header">我的</router-link>

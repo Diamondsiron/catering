@@ -19,11 +19,17 @@ import pwd from '@/views/pwd/pwd.vue'
 import remaining from '@/views/remaining/remaining.vue'
 import wx from '@/views/wx/wx.vue'
 import Oauth from '@/views/Oauth/Oauth.vue'
+import list from '@/views/list/list.vue'
 import list1 from '@/views/list/list1.vue'
 import list2 from '@/views/list/list2.vue'
 import list3 from '@/views/list/list3.vue'
 import list4 from '@/views/list/list4.vue'
-
+import parabola from '@/views/parabola/parabola.vue'
+import bannershow from '@/views/bannerShow/bannerShow.vue'
+import notice from '@/views/notice/notice.vue'
+import attendance from '@/views/attendance/attendance.vue'
+import attendancelist from '@/views/attendanceList/attendanceList.vue'
+import recharge from '@/views/recharge/recharge.vue'
 
 
 
@@ -172,6 +178,11 @@ export const appRouter = [
     component: Oauth
   },
   {
+    path: '/list',
+    name: 'list',
+    component: list
+  },
+  {
     path: '/list1',
     name: 'list1',
     component: list1
@@ -190,7 +201,38 @@ export const appRouter = [
     path: '/list4',
     name: 'list4',
     component: list4
+  },
+  {
+    path: '/parabola',
+    name: 'parabola',
+    component: parabola
+  },
+  {
+    path: '/bannershow',
+    name: 'bannershow',
+    component: bannershow
+  },
+  {
+    path: '/notice',
+    name: 'notice',
+    component: notice
+  },
+  {
+    path: '/attendance',
+    name: 'attendance',
+    component: attendance
+  },
+  {
+    path: '/attendancelist',
+    name: 'attendancelist',
+    component: attendancelist
+  },
+  {
+    path: '/recharge',
+    name: 'recharge',
+    component: recharge
   }
+  
 ];
 
 

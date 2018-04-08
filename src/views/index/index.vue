@@ -27,14 +27,12 @@
       </div>
       <div class="bar-index-quick-nav">
           <div class="col">
-            排餐
+           签到
           </div>
           <div class="col">
-           同楼拼餐
+           排餐
           </div>
-          <div class="col">
-            邀请好友
-          </div>
+          
           <div class="col">
             充值
           </div>
@@ -44,42 +42,29 @@
 
     </div>
     <Row>
-        <Col span="12">图片一</Col>
-        <Col span="12">图片二</Col>
+        <Col span="24">动态活动专区</Col>
     </Row>
     <div>
-      <h3>线体健身</h3>
+      <h3></h3>
         <Row>
-            <Col span="8">图片一</Col>
-            <Col span="8">图片二</Col>
-            <Col span="8">图片三</Col>
+            <Col span="24">安心套餐图文展示</Col>
+           
         </Row>
     </div>
     <div>
       <h3>清新沙拉</h3>
         <Row>
-            <Col span="8">图片一</Col>
-            <Col span="8">图片二</Col>
-            <Col span="8">图片三</Col>
+            <Col span="24">自选套餐图文展示</Col>
         </Row>
     </div>
     <div>
       <h3>母婴营养</h3>
         <Row>
-            <Col span="8">图片一</Col>
-            <Col span="8">图片二</Col>
-            <Col span="8">图片三</Col>
+            <Col span="24">量身套餐图文展示</Col>
         </Row>
     </div>
-    <div>
-      <h3>美味</h3>
-        <Row>
-            <Col span="8">图片一</Col>
-            <Col span="8">图片二</Col>
-            <Col span="8">图片三</Col>
-        </Row>
-    </div>
-    <div @click="promise()">跨域访问</div>
+   
+   
     
      
     <Tabs></Tabs>
