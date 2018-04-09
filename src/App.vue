@@ -21,4 +21,7 @@ export default {
   
   font-size: 16px;
 }
+body{
+  background-color: #f2f2f2;
+}
 </style>

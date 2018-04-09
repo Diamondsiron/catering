@@ -2,14 +2,14 @@
 <div>
   <div class="recharge">
       <div class="recharge-form">
-          <div class="tabs col-box">
-              <div class="tab col t-r">
-                  当前账号
-              </div>
-              <div class="tab col t-l">
-                  给其他账号充值
-              </div>
-          </div>
+         <div class="tabs col-box" style="display:flex">
+            <div class="tab col t-r" >
+                <img class="phone" src="static/recharge-check-on.png" phone="18722372579">当前账号
+            </div>
+            <div class="tab col t-l">
+                <img class="phone" src="static/recharge-check.png" phone="">给其他账号充值
+            </div>
+        </div>
           <div class="input-box">
               <input type="text" id="phone" name="phone" placeholder="请输入手机号码" value="18722372579" readonly="readonly">
           </div>
@@ -18,7 +18,7 @@
           <div class="count-card">
               <div class="count-card-l"></div>
               <div class="count-card-m">
-                  <div class="equation">
+                  <div class="equation" style="padding-top:30px;">
                       <div class="col-2">
                           <h4 id="payPrice">1000</h4>
                           <p>充值</p>
@@ -85,7 +85,7 @@
       </div>
       <div class="pay-list">
           <div class="pay-list-item">
-              <button class="wepay" onclick="payFun()"><img src="/mobile/asset/css/imgs/recharge/wepay.png">微信支付</button>
+              <button class="wepay" onclick="payFun()"><img src="static/wepay.png">微信支付</button>
           </div>
       </div>
   </div>
@@ -127,13 +127,7 @@
 .recharge .recharge-form .tabs .tab+.tab {
     border-left: 1px solid rgba(255,255,255,0.5);
 }
-.recharge .recharge-form .tabs .tab {
-    height: 24px;
-    font-size: 12px;
-    line-height: 24px;
-    padding: 0 15px;
-    color: #fff;
-}
+
 .t-l {
     text-align: left !important;
 }
@@ -171,7 +165,7 @@ button, input {
 .recharge .recharge-options .count-card .count-card-l {
     height: 90px;
     width: 11px;
-    
+        background: url(../../../static/count-card-l.png) no-repeat center;
     background-size: 11px 90px;
     position: absolute;
     top: 0;
@@ -180,14 +174,14 @@ button, input {
 .recharge .recharge-options .count-card .count-card-m {
     height: 90px;
     width: 11px;
-   
+        background: url(../../../static/count-card-m.png) repeat-x;
     background-size: 11px 90px;
     width: 100%;
 }
 .recharge .recharge-options .count-card .count-card-r {
     height: 90px;
     width: 11px;
-   
+   background: url(../../../static/count-card-r.png) no-repeat center;
     background-size: 11px 90px;
     position: absolute;
     top: 0;
@@ -267,6 +261,13 @@ button, input {
     -webkit-box-flex: 1;
     box-flex: 1;
     text-align: center;
+}
+.recharge .recharge-form .tabs .tab img {
+    height: 16px;
+    width: 16px;
+    display: inline-block;
+    vertical-align: -3px;
+    margin-right: 5px;
 }
 
 </style>

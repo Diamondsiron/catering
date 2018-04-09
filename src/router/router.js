@@ -10,14 +10,18 @@ import login from '@/views/login/login.vue'
 import test from '@/views/test/test.vue'
 import activity from '@/views/activity/activity.vue'
 import address from '@/views/address/address.vue'
+import insertaddress from '@/views/address/insertaddress.vue'
 import charge from '@/views/charge/charge.vue'
 import coupon from '@/views/coupon/coupon.vue'
 import groupmeal from '@/views/groupmeal/groupmeal.vue'
 import history from '@/views/history/history.vue'
 import information from '@/views/information/information.vue'
+import updatename from '@/views/information/updateName.vue'
+import updatetel from '@/views/information/updateTel.vue'
 import integral from '@/views/integral/integral.vue'
 import Invitation from '@/views/Invitation/Invitation.vue'
 import order from '@/views/order/order.vue'
+import myorder from '@/views/order/myorder.vue'
 import orderform from '@/views/orderForm/orderForm.vue'
 import orderdetail from '@/views/orderDetail/orderDetail.vue'
 import pwd from '@/views/pwd/pwd.vue'
@@ -36,6 +40,7 @@ import custommadetwo from '@/views/customMade/customMadeTwo.vue'
 import custommadethree from '@/views/customMade/customMadeThree.vue'
 import custommadefour from '@/views/customMade/customMadeFour.vue'
 import custommadefive from '@/views/customMade/customMadeFive.vue'
+import sign from '@/views/sign/sign.vue'
 
 
 
@@ -140,6 +145,11 @@ export const appRouter = [
     component: address
   },
   {
+    path: '/insertaddress',
+    name: 'insertaddress',
+    component: insertaddress
+  },
+  {
     path: '/charge',
     name: 'charge',
     component: charge
@@ -165,6 +175,16 @@ export const appRouter = [
     component: information
   },
   {
+    path: '/updatename',
+    name: 'updatename',
+    component: updatename
+  },
+  {
+    path: '/updatetel',
+    name: 'updatetel',
+    component: updatetel
+  },
+  {
     path: '/integral',
     name: 'integral',
     component: integral
@@ -178,6 +198,11 @@ export const appRouter = [
     path: '/order',
     name: 'order',
     component: order
+  },
+  {
+    path: '/myorder',
+    name: 'myorder',
+    component: myorder
   },
   {
     path: '/orderform',
@@ -269,6 +294,11 @@ export const appRouter = [
     name: 'custommadefive',
     component: custommadefive
   },
+  {
+    path: '/sign',
+    name: 'sign',
+    component: sign
+  }
   
 ];
 

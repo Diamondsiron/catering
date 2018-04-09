@@ -18,7 +18,7 @@
          <router-link :to="{ path: '/remaining'}" >剩余套餐</router-link>
       </li>
        <li>
-         <router-link :to="{ path: '/order'}" >我的订单</router-link>
+         <router-link :to="{ path: '/myorder'}" >我的订单</router-link>
       </li>
        <li>
          <router-link :to="{ path: '/address'}" >配送地址</router-link>

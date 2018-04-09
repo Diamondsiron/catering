@@ -1,21 +1,24 @@
 <template>
 <div>
-  <div style="display:flex" class="top">
-    <div style="flex:1">普通登录</div>
-    <div  style="flex:1;border-left: 1px solid #CBCBCB;">短信快捷登录</div>
-  </div>
   <div class="main">
     <div class="form-box height80">
         <input type="tel" name="phone" id="phone" placeholder="手机号码" class="border-b" style="height:41px">
           <input type="password" name="password" id="password" placeholder="密码" style="height:38px">
       </div>
+      <div class="form">
+        <input type="number" placeholder="验证码" class="yzm" name="code" id="code">
+        <button  class="btm-pink" id="seconds_code" >获取验证码</button>
+      </div>
       
+      <div class="form-box">
+          <input type="text" placeholder="邀请码（选填）" class="" id="couponCode" name="couponCode">
+      </div>
       
-      <button class="btm-block">登录</button>
-      <a href="/quicklogin/" class="text-block">注册账号</a>
-     
+      <button class="btm-block">注册账号</button>
+      <a href="/quicklogin/" class="text-block">登录</a>
+      
   </div>
-   <Tabs></Tabs>
+  <Tabs></Tabs>
 </div>
   
 </template>
@@ -127,15 +130,6 @@ button {
 a {
     text-decoration: none;
     color: #EE5E6F;
-}
-.top{
-    height: 42px;
-    background: #E3E3E3;
-    line-height: 42px;
-    font-weight: bold;
-    font-size: 14px;
-    border-bottom: 1px solid #CBCBCB;
-    border-top: 1px solid #CBCBCB;
 }
 </style>
 
