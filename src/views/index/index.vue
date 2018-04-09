@@ -41,31 +41,38 @@
     <div class="img-box">
 
     </div>
-    <Row>
-        <Col span="24">动态活动专区</Col>
-    </Row>
-    <div>
-      <h3></h3>
-        <Row>
-            <Col span="24">
-            <div  @click="list();">
-              安心套餐
-            </div>
-            </Col>
-           
-        </Row>
+    <div style="display:flex">
+      <div style="flex:1">
+        动态活动区
+      </div>
+
     </div>
-    <div>
-      <h3>清新沙拉</h3>
-        <Row>
-            <Col span="24">自选套餐图文展示</Col>
-        </Row>
+     <div style="display:flex">
+      <div style="flex:1" @click="list();">
+       安心套餐 
+      </div>
+
     </div>
-    <div>
-      <h3>母婴营养</h3>
-        <Row>
-            <Col span="24">量身套餐图文展示</Col>
-        </Row>
+   <div style="display:flex">
+      <div style="flex:1" @click="optionalmeal()">
+        自选套餐 
+      </div>
+
+    </div>
+   
+   <div style="display:flex">
+     <div style="flex:1" @click="custommeal()">
+        量身套餐 
+      </div>
+
+    </div>
+    <div style="display:flex">
+      <div style="flex:1">
+        量身套餐 普通模式
+      </div>
+       <div style="flex:1">
+         量身套餐 达人模式
+      </div>
     </div>
    
    
@@ -106,6 +113,12 @@ export default{
     },
     list(){
        this.$router.push({name:'list'})
+    },
+    optionalmeal(){
+       this.$router.push({name:'optionalmeal'})
+    },
+    custommeal(){
+       this.$router.push({name:'custommeal'})
     },
     attendance(){
       this.$router.push({name:'attendance'})

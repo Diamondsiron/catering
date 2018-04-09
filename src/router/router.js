@@ -3,6 +3,8 @@ import appointment from '@/views/appointment/appointment.vue'
 import index from '@/views/index/index.vue'
 import indent from '@/views/indent/indent.vue'
 import meal from '@/views/meal/meal.vue'
+import custommeal from '@/views/customMeal/customMeal.vue'
+import optionalmeal from '@/views/optionalMeal/optionalMeal.vue'
 import mealdetail from '@/views/mealDetail/mealDetail.vue'
 import login from '@/views/login/login.vue'
 import test from '@/views/test/test.vue'
@@ -23,16 +25,18 @@ import remaining from '@/views/remaining/remaining.vue'
 import wx from '@/views/wx/wx.vue'
 import Oauth from '@/views/Oauth/Oauth.vue'
 import list from '@/views/list/list.vue'
-import list1 from '@/views/list/list1.vue'
-import list2 from '@/views/list/list2.vue'
-import list3 from '@/views/list/list3.vue'
-import list4 from '@/views/list/list4.vue'
 import parabola from '@/views/parabola/parabola.vue'
 import bannershow from '@/views/bannerShow/bannerShow.vue'
 import notice from '@/views/notice/notice.vue'
 import attendance from '@/views/attendance/attendance.vue'
 import attendancelist from '@/views/attendanceList/attendanceList.vue'
 import recharge from '@/views/recharge/recharge.vue'
+import custommadeone from '@/views/customMade/customMadeOne.vue'
+import custommadetwo from '@/views/customMade/customMadeTwo.vue'
+import custommadethree from '@/views/customMade/customMadeThree.vue'
+import custommadefour from '@/views/customMade/customMadeFour.vue'
+import custommadefive from '@/views/customMade/customMadeFive.vue'
+
 
 
 
@@ -104,6 +108,16 @@ export const appRouter = [
     path: '/meal/:id',
     name: 'meal',
     component: meal
+  },
+  {
+    path: '/optionalmeal',
+    name: 'optionalmeal',
+    component: optionalmeal
+  },
+  {
+    path: '/custommeald',
+    name: 'custommeal',
+    component: custommeal
   },
   {
     path: '/mealdetail',
@@ -201,26 +215,6 @@ export const appRouter = [
     component: list
   },
   {
-    path: '/list1',
-    name: 'list1',
-    component: list1
-  },
-  {
-    path: '/list2',
-    name: 'list2',
-    component: list2
-  },
-  {
-    path: '/list3',
-    name: 'list3',
-    component: list3
-  },
-  {
-    path: '/list4',
-    name: 'list4',
-    component: list4
-  },
-  {
     path: '/parabola',
     name: 'parabola',
     component: parabola
@@ -249,7 +243,32 @@ export const appRouter = [
     path: '/recharge',
     name: 'recharge',
     component: recharge
-  }
+  },
+  {
+    path: '/custommadeone',
+    name: 'custommadeone',
+    component: custommadeone
+  },
+  {
+    path: '/custommadetwo',
+    name: 'custommadetwo',
+    component: custommadetwo
+  },
+  {
+    path: '/custommadethree',
+    name: 'custommadethree',
+    component: custommadethree
+  },
+  {
+    path: '/custommadefour',
+    name: 'custommadefour',
+    component: custommadefour
+  },
+  {
+    path: '/custommadefive',
+    name: 'custommadefive',
+    component: custommadefive
+  },
   
 ];
 

@@ -2,44 +2,31 @@
   <div>
     <div class="user">
         <img src="http://img.yotafood.com/static/header/2018-03-28/177612.jpg">
+        <span>彰明较著</span>
     </div>
     <ul class="user-list">
       <li>
-         <router-link :to="{ path: '/activity'}" >活动</router-link>
-      </li>
-       <li>
-         <router-link :to="{ path: '/address'}" >地址</router-link>
+         <router-link :to="{ path: '/information'}" >187********</router-link>
       </li>
        <li>
          <router-link :to="{ path: '/charge'}" >余额</router-link>
       </li>
        <li>
-         <router-link :to="{ path: '/coupon'}" >优惠券</router-link>
-      </li>
-       <li>
-         <router-link :to="{ path: '/groupmeal'}" >团餐</router-link>
-      </li>
-       <li>
-         <router-link :to="{ path: '/history'}" >订餐历史</router-link>
-      </li>
-       <li>
-         <router-link :to="{ path: '/information'}" >个人信息</router-link>
-      </li>
-       <li>
          <router-link :to="{ path: '/integral'}" >积分</router-link>
-      </li>
-       <li>
-         <router-link :to="{ path: '/Invitation'}" >分享</router-link>
-      </li>
-       <li>
-         <router-link :to="{ path: '/order'}" >订单</router-link>
-      </li>
-       <li>
-         <router-link :to="{ path: '/pwd'}" >修改密码</router-link>
       </li>
        <li>
          <router-link :to="{ path: '/remaining'}" >剩余套餐</router-link>
       </li>
+       <li>
+         <router-link :to="{ path: '/order'}" >我的订单</router-link>
+      </li>
+       <li>
+         <router-link :to="{ path: '/address'}" >配送地址</router-link>
+      </li>
+       <li>
+         <router-link :to="{ path: '/pwd'}" >修改密码</router-link>
+      </li>
+       
         <li>
          <router-link :to="{ path: '/wx'}" >微信认证</router-link>
       </li>
