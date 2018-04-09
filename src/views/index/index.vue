@@ -4,7 +4,7 @@
       <div class="bar-banner">
          <Carousel v-model="value1" loop>
             <CarouselItem>
-                <div class="demo-carousel">
+                <div class="demo-carousel" @click="bannershow()">
                   <img src="static/1.jpg" alt="">
                 </div>
             </CarouselItem>
@@ -26,14 +26,14 @@
         </Carousel>
       </div>
       <div class="bar-index-quick-nav">
-          <div class="col">
+          <div class="col" @click="attendance();">
            签到
           </div>
           <div class="col">
            排餐
           </div>
           
-          <div class="col">
+          <div class="col" @click="recharge();">
             充值
           </div>
       </div>
@@ -47,7 +47,11 @@
     <div>
       <h3></h3>
         <Row>
-            <Col span="24">安心套餐图文展示</Col>
+            <Col span="24">
+            <div  @click="list();">
+              安心套餐
+            </div>
+            </Col>
            
         </Row>
     </div>
@@ -96,6 +100,18 @@ export default{
     
     async(){
 
+    },
+    bannershow(){
+      this.$router.push({name:'bannershow'})
+    },
+    list(){
+       this.$router.push({name:'list'})
+    },
+    attendance(){
+      this.$router.push({name:'attendance'})
+    },
+    recharge(){
+      this.$router.push({name:'recharge'})
     },
     ajax(){
       return new Promise(function(resolve, reject){

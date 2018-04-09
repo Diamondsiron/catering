@@ -7,14 +7,14 @@
     <div>
       <ul>
         <li v-for="item in list" :key="item">
-          <div class="row">
-            <div class="col-1"> 1</div>
+          <div class="row" @click="getInfo();">
+            <div class="col-1">图片</div>
             <div class="col-1"> 
               <div>
-                  2
+                  文本
               </div>
               <div>
-                  3
+                 文本
               </div>
 
             </div>
@@ -35,7 +35,9 @@ export default{
     }
   },
   methods:{
-
+    getInfo(){
+      this.$router.push({name:'mealdetail'})
+    }
   }
   
 

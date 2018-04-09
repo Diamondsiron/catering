@@ -46,7 +46,7 @@
       </div>
       <div>
         <span>若需要随餐增加点心，汤品，可在订单确认页面购买</span>
-        <button >购买套餐</button>
+        <button @click="buy()">购买套餐</button>
       </div>
       <div>
          <ShopCart></ShopCart>
@@ -66,6 +66,11 @@ export default{
       'ShopCart': () => import('@/components/common/shopcart.vue'),
      'datebar': () => import('@/components/common/datebar.vue')
   },
+  methods:{
+    buy(){
+       this.$router.push({name:'orderform'})
+    }
+  }
 
 }
   
