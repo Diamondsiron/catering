@@ -34,11 +34,14 @@
             <button></button>
           </div>
           <div>
-             <div style="width:100%;height:200px;border:#ccc solid 1px;" id="allmap"></div>
+             <div style="width:100%;height:200px;border:#ccc solid 1px;" id="allmap" ></div>
           </div>
-           <div style="">
-             <div style="width:100%;height:200px;border:#ccc solid 1px;" id="hiddenmap"></div>
-          </div>
+          <ul>
+              <li v-for="item in list" :key="item">
+                  {{item}}
+              </li>
+          </ul>
+         
         </div>
       </div>
        
@@ -50,7 +53,10 @@
     name:'',
     data(){
       return{
-          value:''
+          value:'',
+          list:[],
+          checks:''
+          
       }
     },
     components:{
@@ -67,9 +73,9 @@
         init(){
         var map = new BMap.Map("allmap");    // 创建Map实例
         map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
-        
+       
          
-        map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+       map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
         map.enableScrollWheelZoom(true);  
         var geolocation = new BMap.Geolocation();
         geolocation.getCurrentPosition(function(r){
@@ -83,30 +89,23 @@
             //alert('failed'+this.getStatus());
             }        
             },{enableHighAccuracy: true})
+            var geoc = new BMap.Geocoder();   
+            map.addEventListener("click",function(e){
+                //console.log(e.address);
+                //alert(e.point.lng + "," + e.point.lat);
+                var pt = e.point;
+                geoc.getLocation(pt, function(rs){
+                    var addComp = rs.addressComponents;
+                    alert(addComp.province + ", " + addComp.city + ", " + addComp.district + ", " + addComp.street + ", " + addComp.streetNumber);
+                });
+            });
         
-        
+       window.map = map;//将map变量存储在全局
 
       },
       search(value){
-          var map = new BMap.Map("hiddenmap");    // 创建Map实例
-        map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
         
-         
-        map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
-        map.enableScrollWheelZoom(true);  
-        var geolocation = new BMap.Geolocation();
-        geolocation.getCurrentPosition(function(r){
-         if(this.getStatus() == BMAP_STATUS_SUCCESS){
-            var mk = new BMap.Marker(r.point);
-            map.addOverlay(mk);
-            map.panTo(r.point);
-        // alert('您的位置：'+r.point.lng+','+r.point.lat);
-            }
-            else {
-            //alert('failed'+this.getStatus());
-            }        
-            },{enableHighAccuracy: true})
-          
+          var that = this
           var options = {
             onSearchComplete: function(results){
                 // 判断状态是否正确
@@ -114,9 +113,15 @@
                     var s = [];
                     for (var i = 0; i < results.getCurrentNumPois(); i ++){
                         console.log(results);
-                        s.push(results.getPoi(i).title + ", " + results.getPoi(i).address);
+                        s.push(results.getPoi(i).city+','+ results.getPoi(i).address + ", " + results.getPoi(i).title);
                     }
+                   // if (results.getPageIndex() < results.getNumPages() - 1){
+                     //   local.gotoPage(results.getPageIndex() + 1); 
+                   // }
+                    
                    console.log(s);
+                   that.list = s;
+                   console.log(that.list)
                 }
             }
         };
