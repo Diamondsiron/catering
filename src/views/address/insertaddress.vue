@@ -25,7 +25,9 @@
     </div>
      <Tabs></Tabs>
       <div class="popup-mask hide">
+          
         <div class="popup">
+            <div  class="close"></div>
           <h3 style="color:#fff;background-color: #f05c6d;">选择楼宇</h3>
           <div style="background-color: #f05c6d;padding: 4px 10px 4px 30px;position: relative;">
             <div class="input-box" >
@@ -252,6 +254,17 @@ li{
     padding: 4px 10px;
     line-height: 1;
     position: relative;
+}
+.close {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: absolute;
+    top: -14px;
+    right: -14px;
+    background: url(../../../static/close.png) no-repeat center;
+    background-size: 30px;
+    z-index: 1;
 }
 
 

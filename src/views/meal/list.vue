@@ -24,7 +24,7 @@
         </li>
       </ul>
     </div>
-   <Tabs></Tabs>
+   <ShopCart></ShopCart>
   </div>
 </template>
 <script>
@@ -35,7 +35,7 @@ export default{
     }
   },
   components:{
-    'Tabs': () => import('@/components/common/tabs.vue'),
+    'ShopCart': () => import('@/components/common/shopcart.vue'),
   },
   methods:{
     getInfo(){

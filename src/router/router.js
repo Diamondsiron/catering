@@ -3,18 +3,18 @@ import appointment from '@/views/appointment/appointment.vue'
 import index from '@/views/index/index.vue'
 import indent from '@/views/indent/indent.vue'
 import meal from '@/views/meal/meal.vue'
-import custommeal from '@/views/customMeal/customMeal.vue'
-import optionalmeal from '@/views/optionalMeal/optionalMeal.vue'
-import mealdetail from '@/views/mealDetail/mealDetail.vue'
-import login from '@/views/login/login.vue'
+import custommeal from '@/views/meal/customMeal.vue'
+import optionalmeal from '@/views/meal/optionalMeal.vue'
+import mealdetail from '@/views/meal/mealDetail.vue'
+
 import test from '@/views/test/test.vue'
-import activity from '@/views/activity/activity.vue'
+
 import address from '@/views/address/address.vue'
 import insertaddress from '@/views/address/insertaddress.vue'
 import charge from '@/views/charge/charge.vue'
 import coupon from '@/views/coupon/coupon.vue'
-import groupmeal from '@/views/groupmeal/groupmeal.vue'
-import history from '@/views/history/history.vue'
+import groupmeal from '@/views/meal/groupmeal.vue'
+
 import information from '@/views/information/information.vue'
 import updatename from '@/views/information/updateName.vue'
 import updatetel from '@/views/information/updateTel.vue'
@@ -22,18 +22,18 @@ import integral from '@/views/integral/integral.vue'
 import Invitation from '@/views/Invitation/Invitation.vue'
 import order from '@/views/order/order.vue'
 import myorder from '@/views/order/myorder.vue'
-import orderform from '@/views/orderForm/orderForm.vue'
-import orderdetail from '@/views/orderDetail/orderDetail.vue'
-import pwd from '@/views/pwd/pwd.vue'
+import orderform from '@/views/order/orderForm.vue'
+import orderdetail from '@/views/order/orderDetail.vue'
+import pwd from '@/views/sign/pwd.vue'
 import remaining from '@/views/remaining/remaining.vue'
 import wx from '@/views/wx/wx.vue'
 import Oauth from '@/views/Oauth/Oauth.vue'
-import list from '@/views/list/list.vue'
+import list from '@/views/meal/list.vue'
 import parabola from '@/views/parabola/parabola.vue'
-import bannershow from '@/views/bannerShow/bannerShow.vue'
-import notice from '@/views/notice/notice.vue'
+import bannershow from '@/views/index/bannerShow.vue'
+import notice from '@/views/attendance/notice.vue'
 import attendance from '@/views/attendance/attendance.vue'
-import attendancelist from '@/views/attendanceList/attendanceList.vue'
+import attendancelist from '@/views/attendance/attendanceList.vue'
 import recharge from '@/views/recharge/recharge.vue'
 import custommadeone from '@/views/customMade/customMadeOne.vue'
 import custommadetwo from '@/views/customMade/customMadeTwo.vue'
@@ -51,7 +51,7 @@ export const loginRouter = {
   meta: {
       title: 'Login - 登录'
   },
-  component: () => import('@/views/login/login.vue')
+  component: () => import('@/views/sign/login.vue')
 };
 
 export const page404 = {
@@ -135,11 +135,6 @@ export const appRouter = [
     component: test
   },
   {
-    path: '/activity',
-    name: 'activity',
-    component: activity
-  },
-  {
     path: '/address',
     name: 'address',
     component: address
@@ -163,11 +158,6 @@ export const appRouter = [
     path: '/groupmeal',
     name: 'groupmeal',
     component: groupmeal
-  },
-  {
-    path: '/history',
-    name: 'history',
-    component: history
   },
   {
     path: '/information',

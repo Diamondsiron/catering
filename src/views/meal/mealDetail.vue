@@ -44,21 +44,29 @@
       <div>
         <datebar></datebar>
       </div>
-      <div style="width:200px">
+      <div style="width:300px">
         <div style="display:flex">
-          <div style="flex:0 0 80px"><button>午餐</button></div>
-          <div style="flex:1"><button>+</button><span>1</span><button>-</button></div>
+          <div style="flex:0 0 80px"><button class="btn">午餐</button></div>
+          <div style="flex:1"> 
+              <button class="cut "></button>
+              <input class="num" value="0">
+               <button class="add " ></button>
+          </div>
           <div  style="flex:1"></div>
         </div>
         <div style="display:flex">
-           <div style="flex:0 0 80px"><button>晚餐</button></div>
-          <div  style="flex:1"><button>+</button><span>1</span><button>-</button></div>
+           <div style="flex:0 0 80px"><button class="btn">晚餐</button></div>
+          <div  style="flex:1">
+               <button class="cut "></button>
+              <input class="num" value="0">
+               <button class="add " ></button>
+          </div>
           <div  style="flex:1"></div>
         </div>
        <div style="display:flex">
-           <div style="flex:0 0 80px"><button>单日</button></div>
-          <div  style="flex:1"><button>3日</button></div>
-          <div  style="flex:1"><button>7日</button></div>
+           <div style="flex:0 0 80px"><button class="btn">单日</button></div>
+          <div  style="flex:1"><button class="btn">3日</button></div>
+          <div  style="flex:1"><button class="btn">7日</button></div>
 
         </div>
       </div>
@@ -113,6 +121,48 @@ header{
 .col{
   flex: 1;
 }
-
+.cut {
+    background: url(../../../static/cut.png) no-repeat center center;
+    background-size: 20px 20px;
+     width: 20px;
+}
+button {
+    padding: 0;
+    height: 20px;
+   
+    border: none;
+    display: inline-block;
+}
+.num {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 11px;
+    line-height: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0 2px;
+    width: 28px;
+    text-align: center;
+    border: 1px solid #ddd;
+    color: #333;
+    outline: 0;
+    box-shadow: none;
+    border-radius: 0;
+    -webkit-appearance: none;
+}
+.add {
+   width: 20px;
+    background: url(../../../static/add.png) no-repeat center center;
+    background-size: 20px 20px;
+}
+.btn{
+    width: 60px;
+    background-color: #42d65a;
+    border-radius: 10px;
+    outline: none;
+}
+.btn:active {
+     background-color: #aed49b;
+}
 </style>
 

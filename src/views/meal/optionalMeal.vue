@@ -7,13 +7,13 @@
     <div style="display:flex">
       <div style="flex:0 0 80px">
         <ul>
-          <li>蛋白质</li>
-          <li>碳水类</li>
-          <li>蔬菜类</li>
-          <li>水果类</li>
-          <li>烫饮类</li>
-          <li>酱料类</li>
-          <li>补剂类</li>
+          <li class="aside">蛋白质</li>
+          <li class="aside">碳水类</li>
+          <li class="aside">蔬菜类</li>
+          <li class="aside">水果类</li>
+          <li class="aside">烫饮类</li>
+          <li class="aside">酱料类</li>
+          <li class="aside">补剂类</li>
         </ul>
       </div>
       <div style="flex:1">
@@ -38,7 +38,7 @@
         </ul>
       </div>
     </div>
-    <Tabs></Tabs>
+    <ShopCart></ShopCart>
    
   </div>
 </template>
@@ -50,7 +50,7 @@ export default{
     }
   },
   components:{
-    'Tabs': () => import('@/components/common/tabs.vue'),
+    'ShopCart': () => import('@/components/common/shopcart.vue'),
   },
   methods:{
     getInfo(){
@@ -78,6 +78,11 @@ header{
 }
 li{
   list-style: none;
+ 
+}
+.aside{
+    background-color: rgb(49, 190, 175);
+    border: 1px solid rgb(83, 58, 58);
 }
 .row{
   display: flex
