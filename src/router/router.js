@@ -26,10 +26,10 @@ import orderform from '@/views/order/orderForm.vue'
 import orderdetail from '@/views/order/orderDetail.vue'
 import pwd from '@/views/sign/pwd.vue'
 import remaining from '@/views/remaining/remaining.vue'
-import wx from '@/views/wx/wx.vue'
-import Oauth from '@/views/Oauth/Oauth.vue'
+import wx from '@/views/test/wx.vue'
+
 import list from '@/views/meal/list.vue'
-import parabola from '@/views/parabola/parabola.vue'
+import parabola from '@/views/test/parabola.vue'
 import bannershow from '@/views/index/bannerShow.vue'
 import notice from '@/views/attendance/notice.vue'
 import attendance from '@/views/attendance/attendance.vue'
@@ -219,12 +219,7 @@ export const appRouter = [
     name: 'wx',
     component: wx
   },
-  {
-    path: '/Oauth',
-    name: 'Oauth',
-    component: Oauth
-  },
-  {
+ {
     path: '/list',
     name: 'list',
     component: list
