@@ -2,7 +2,7 @@
   <div>
       <div class="map-select-address heightAddressList">
         <div class="address-form">
-          <div class="form-block" onclick="selectAddressFun('#map_address_div_main')">
+          <div class="form-block" >
               <div class="item">
                   <h4 id="addressLibName">请选择配送楼宇</h4>
                   <p id="addressLibsss"></p>
@@ -26,21 +26,25 @@
      <Tabs></Tabs>
       <div class="popup-mask hide">
         <div class="popup">
-          <h3>选择楼宇</h3>
-          <div>
-            <div>
-              <input type="text" placeholder="请输入楼宇名称，例如：世茂大厦" v-model="value">
+          <h3 style="color:#fff;background-color: #f05c6d;">选择楼宇</h3>
+          <div style="background-color: #f05c6d;padding: 4px 10px 4px 30px;position: relative;">
+            <div class="input-box" >
+              <input type="text" placeholder="请输入楼宇名称，例如：世茂大厦" v-model="value" style="border: none;outline: none;">
+              <img src="http://img.yotafood.com/mobile/event/spring/css/imgs/search.png" alt="" class="search-icon">
             </div>
-            <button></button>
+            
           </div>
           <div>
              <div style="width:100%;height:200px;border:#ccc solid 1px;" id="allmap" ></div>
           </div>
-          <ul>
-              <li v-for="item in list" :key="item">
-                  {{item}}
+          <ul style="margin-top:20px;">
+              <li v-for="item in list" :key="item" class="list-item line">
+                  <p>{{item}}</p>
               </li>
           </ul>
+          <div class="btn-box ">
+                <button id="button_submit_address" class="" disabled >完善详细地址 ＞＞</button>
+            </div>
          
         </div>
       </div>
@@ -197,6 +201,57 @@
     border-radius: 4px;
     position: relative;
         z-index: 15;
+}
+.list-item{
+    text-align: left;
+    height: 36px;
+    line-height: 1;
+    font-size: 12px;
+}
+.list-item p{
+    margin-top: 14px;
+    margin-left: 20px;
+}
+.line{
+     border-top: 1px solid #e6e6e6;
+}
+li{
+    list-style: none;
+}
+.btn-box {
+    position: absolute;
+    bottom:30px;
+    left: 0;
+    right: 0;
+    height: 40px;
+    padding: 10px;
+}
+.btn-box button:disabled {
+    background-color: #d8d8d8;
+}
+.btn-box button {
+    background-color: #f05c6d;
+    border-radius: 2px;
+    border: none;
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+    color: #fff;
+}
+.search-icon {
+    display: inline-block;
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    top: 8px;
+    left: 14px;
+}
+.input-box {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 4px 10px;
+    line-height: 1;
+    position: relative;
 }
 
 
