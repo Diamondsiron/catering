@@ -44,6 +44,24 @@
       <div>
         <datebar></datebar>
       </div>
+      <div style="width:200px">
+        <div style="display:flex">
+          <div style="flex:0 0 80px"><button>午餐</button></div>
+          <div style="flex:1"><button>+</button><span>1</span><button>-</button></div>
+          <div  style="flex:1"></div>
+        </div>
+        <div style="display:flex">
+           <div style="flex:0 0 80px"><button>晚餐</button></div>
+          <div  style="flex:1"><button>+</button><span>1</span><button>-</button></div>
+          <div  style="flex:1"></div>
+        </div>
+       <div style="display:flex">
+           <div style="flex:0 0 80px"><button>单日</button></div>
+          <div  style="flex:1"><button>3日</button></div>
+          <div  style="flex:1"><button>7日</button></div>
+
+        </div>
+      </div>
       <div>
         <span>若需要随餐增加点心，汤品，可在订单确认页面购买</span>
         <button @click="buy()">购买套餐</button>

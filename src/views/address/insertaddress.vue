@@ -29,12 +29,15 @@
           <h3>选择楼宇</h3>
           <div>
             <div>
-              <input type="text" placeholder="请输入楼宇名称，例如：世茂大厦">
+              <input type="text" placeholder="请输入楼宇名称，例如：世茂大厦" v-model="value">
             </div>
             <button></button>
           </div>
           <div>
-             <Maps></Maps>
+             <div style="width:100%;height:200px;border:#ccc solid 1px;" id="allmap"></div>
+          </div>
+           <div style="">
+             <div style="width:100%;height:200px;border:#ccc solid 1px;" id="hiddenmap"></div>
           </div>
         </div>
       </div>
@@ -47,12 +50,82 @@
     name:'',
     data(){
       return{
-
+          value:''
       }
     },
     components:{
       'Tabs': () => import('@/components/common/tabs.vue'),
       'Maps': () => import('@/components/common/map.vue'),
+    },
+    watch:{
+        value(){
+            console.log(this.value)
+            this.search(this.value)
+        }
+    },
+    methods:{
+        init(){
+        var map = new BMap.Map("allmap");    // 创建Map实例
+        map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
+        
+         
+        map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+        map.enableScrollWheelZoom(true);  
+        var geolocation = new BMap.Geolocation();
+        geolocation.getCurrentPosition(function(r){
+         if(this.getStatus() == BMAP_STATUS_SUCCESS){
+            var mk = new BMap.Marker(r.point);
+            map.addOverlay(mk);
+            map.panTo(r.point);
+        // alert('您的位置：'+r.point.lng+','+r.point.lat);
+            }
+            else {
+            //alert('failed'+this.getStatus());
+            }        
+            },{enableHighAccuracy: true})
+        
+        
+
+      },
+      search(value){
+          var map = new BMap.Map("hiddenmap");    // 创建Map实例
+        map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
+        
+         
+        map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+        map.enableScrollWheelZoom(true);  
+        var geolocation = new BMap.Geolocation();
+        geolocation.getCurrentPosition(function(r){
+         if(this.getStatus() == BMAP_STATUS_SUCCESS){
+            var mk = new BMap.Marker(r.point);
+            map.addOverlay(mk);
+            map.panTo(r.point);
+        // alert('您的位置：'+r.point.lng+','+r.point.lat);
+            }
+            else {
+            //alert('failed'+this.getStatus());
+            }        
+            },{enableHighAccuracy: true})
+          
+          var options = {
+            onSearchComplete: function(results){
+                // 判断状态是否正确
+                if (local.getStatus() == BMAP_STATUS_SUCCESS){
+                    var s = [];
+                    for (var i = 0; i < results.getCurrentNumPois(); i ++){
+                        console.log(results);
+                        s.push(results.getPoi(i).title + ", " + results.getPoi(i).address);
+                    }
+                   console.log(s);
+                }
+            }
+        };
+          var local = new BMap.LocalSearch(map, options);
+          local.search(value);
+      }
+    },
+    mounted(){
+        this.init();
     }
   }
   

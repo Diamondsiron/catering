@@ -39,7 +39,7 @@
       </div>
     </div>
     
-   
+   <Tabs></Tabs>
   </div>
 </template>
 <script>
@@ -48,6 +48,9 @@ export default{
     return{
       list:[1,2,3,4]
     }
+  },
+  components:{
+    'Tabs': () => import('@/components/common/tabs.vue'),
   },
   methods:{
     getInfo(){
