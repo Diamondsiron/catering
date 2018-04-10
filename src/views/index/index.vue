@@ -118,7 +118,7 @@ export default{
        this.$router.push({name:'optionalmeal'})
     },
     custommeal(){
-       this.$router.push({name:'custommeal'})
+       this.$router.push({name:'custommadeone'})
     },
     attendance(){
       this.$router.push({name:'attendance'})

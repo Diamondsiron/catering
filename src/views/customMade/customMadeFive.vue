@@ -25,7 +25,7 @@
 
         </div>
         <div class="form-block-btn">
-            <button class="but-yellow" onclick="submitFun()">下一步</button>
+            <button class="but-yellow"  @click="goto();">下一步</button>
         </div>
     </div>
   </div>
@@ -43,6 +43,9 @@
 
     },
     methods:{
+         goto(){
+             this.$router.push({name:'custommeal'})
+        }
 
     }
 

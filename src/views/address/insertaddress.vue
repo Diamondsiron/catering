@@ -24,10 +24,10 @@
       </div>
     </div>
      <Tabs></Tabs>
-      <div class="popup-mask hide">
+      <div class="popup-mask" v-bind:class="{hidden:!show}">
           
         <div class="popup">
-            <div  class="close"></div>
+            <div  class="close" @click="showpopup()"></div>
           <h3 style="color:#fff;background-color: #f05c6d;">选择楼宇</h3>
           <div style="background-color: #f05c6d;padding: 4px 10px 4px 30px;position: relative;">
             <div class="input-box" >
@@ -61,7 +61,8 @@
       return{
           value:'',
           list:[],
-          checks:''
+          checks:'',
+          show:true
           
       }
     },
@@ -108,6 +109,9 @@
         
        window.map = map;//将map变量存储在全局
 
+      },
+      showpopup(){
+          this.show = !this.show
       },
       search(value){
         
@@ -265,6 +269,9 @@ li{
     background: url(../../../static/close.png) no-repeat center;
     background-size: 30px;
     z-index: 1;
+}
+.hidden{
+    display: none;
 }
 
 
