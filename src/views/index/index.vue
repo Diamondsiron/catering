@@ -60,10 +60,10 @@
    
   
     <div style="display:flex">
-      <div style="flex:1">
+      <div style="flex:1" @click="custommeal()">
         <img src=" http://weixin.yotafood.com/mobile/asset/imgs/4-5.png?v=1" alt="">
       </div>
-       <div style="flex:1">
+       <div style="flex:1" @click="custommeal()">
          <img src=" http://weixin.yotafood.com/mobile/asset/imgs/4-6.png?v=1" alt="">
       </div>
     </div>

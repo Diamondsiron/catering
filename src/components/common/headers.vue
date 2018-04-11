@@ -4,7 +4,7 @@
       <span class="col-0">
        <div style="    margin-top: 10px;
     margin-left: 15px;
-    color: #fff;">
+    color: #fff;" @click="index()">
             <Icon type="home" size="20"></Icon>
         </div>
         </span>
@@ -15,6 +15,16 @@
 
 <script>
 export default {
+  data(){
+    return{
+
+    }
+  },
+  methods:{
+    index(){
+      this.$router.push({name:'index'})
+    }
+  }
 
 }
 </script>

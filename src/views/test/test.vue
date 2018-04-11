@@ -4,10 +4,12 @@
   <div @click="handleClick()">
 111
   </div>
+ 
   <datebar></datebar>
   
  
-  <Maps></Maps>
+  
+   <ruler></ruler>
 </div>
   
  
@@ -26,6 +28,7 @@ export default{
   },
   components:{
     'Maps': () => import('@/components/common/map.vue'),
+     'ruler': () => import('@/components/common/ruler.vue'),
      'datebar': () => import('@/components/common/datebar.vue')
   },
   computed:{
