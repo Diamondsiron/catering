@@ -1,9 +1,8 @@
 <template>
   <div>
-    <header>
-      <span class="col-0">图标</span>
-      <span class="col-1">安心套餐</span>
-    </header>
+    <headers>
+      
+    </headers>
     <div class="product">
       <div>
          <Carousel  loop>
@@ -14,7 +13,7 @@
             </CarouselItem>
             <CarouselItem>
                 <div class="demo-carousel">
-                  <img src="static/1.jpg" alt="">
+                  <img src="static/fish.jpg" alt="">
                 </div>
             </CarouselItem>
             <CarouselItem>
@@ -24,61 +23,51 @@
             </CarouselItem>
             <CarouselItem>
                 <div class="demo-carousel">
-                  <img src="static/1.jpg" alt="">
+                  <img src="static/fish.jpg" alt="">
                 </div>
             </CarouselItem>
         </Carousel>
       </div>
       <div class="row">
-        <div class="col">
-          文字描述
+        <div class="col p10">
+          <h4>高蛋白主菜盒</h4>
+           <p style="font-size: 12px;
+    text-align: left;">外婆菜炒鸡蛋 / （鸿运当头）墨西哥烹汁牛仔粒LM / 三鲜卷LB / </p>
         </div>
-        <div class="col">
-          用户评论
+        <div class="col p10">
+          <h4>999+</h4>
+          <p style="font-size: 12px;">用户评论</p> 
+          <button style="border-radius: 5px;border: none;font-size: 14px; width: 40px;">查看</button>
         </div>
 
       </div>
-      <div>
-        $38.00 $48.00
+      <div style="text-align: left;margin-left: 10px;">
+        <span style="color: red; font-weight: bold;">$38.00</span>
+        <s style="color:rgb(153, 153, 153);margin-left: 5px;">$48.00</s> 
       </div>
-      <div>
+      <div >
         <datebar></datebar>
       </div>
-      <div style="width:300px">
-        <div style="display:flex">
-          <div style="flex:0 0 80px"><button class="btn">午餐</button></div>
-          <div style="flex:1"> 
-              <button class="cut "></button>
-              <input class="num" value="0">
-               <button class="add " ></button>
-          </div>
-          <div  style="flex:1"></div>
-        </div>
-        <div style="display:flex">
-           <div style="flex:0 0 80px"><button class="btn">晚餐</button></div>
-          <div  style="flex:1">
-               <button class="cut "></button>
-              <input class="num" value="0">
-               <button class="add " ></button>
-          </div>
-          <div  style="flex:1"></div>
-        </div>
-       <div style="display:flex">
-           <div style="flex:0 0 80px"><button class="btn">单日</button></div>
-          <div  style="flex:1"><button class="btn">3日</button></div>
-          <div  style="flex:1"><button class="btn">7日</button></div>
-
-        </div>
+     
+      <div>
+        <span  style="
+    margin: 0 auto;
+    font-size: 14px;
+">若需要随餐增加点心，汤品，可在订单确认页面购买</span>
+        <button @click="buy()" style="
+    width:  90%;
+    border-radius:  5px;
+    border:  none;
+    background-color: yellow;
+    color: #333;
+">购买套餐</button>
       </div>
       <div>
-        <span>若需要随餐增加点心，汤品，可在订单确认页面购买</span>
-        <button @click="buy()">购买套餐</button>
-      </div>
-      <div>
-         <ShopCart></ShopCart>
+        <div style="margin-bottom:60px"></div>
+        
       </div>
     </div>
-
+   <ShopCart></ShopCart>
   </div>
 </template>
 <script>
@@ -89,6 +78,7 @@ export default{
     }
   },
    components:{
+     'headers': () => import('@/components/common/headers.vue'),
       'ShopCart': () => import('@/components/common/shopcart.vue'),
      'datebar': () => import('@/components/common/datebar.vue')
   },
@@ -121,48 +111,12 @@ header{
 .col{
   flex: 1;
 }
-.cut {
-    background: url(../../../static/cut.png) no-repeat center center;
-    background-size: 20px 20px;
-     width: 20px;
+
+div{
+  background-color: #fff
 }
-button {
-    padding: 0;
-    height: 20px;
-   
-    border: none;
-    display: inline-block;
-}
-.num {
-    display: inline-block;
-    vertical-align: top;
-    font-size: 11px;
-    line-height: 18px;
-    height: 18px;
-    margin: 0;
-    padding: 0 2px;
-    width: 28px;
-    text-align: center;
-    border: 1px solid #ddd;
-    color: #333;
-    outline: 0;
-    box-shadow: none;
-    border-radius: 0;
-    -webkit-appearance: none;
-}
-.add {
-   width: 20px;
-    background: url(../../../static/add.png) no-repeat center center;
-    background-size: 20px 20px;
-}
-.btn{
-    width: 60px;
-    background-color: #42d65a;
-    border-radius: 10px;
-    outline: none;
-}
-.btn:active {
-     background-color: #aed49b;
+.p10{
+  padding: 10px 10px 10px 10px;
 }
 </style>
 

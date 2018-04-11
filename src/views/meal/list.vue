@@ -1,20 +1,31 @@
 <template>
   <div>
     <header>
-      <span class="col-0">图标</span>
-      <span class="col-1">安心套餐</span>
+      <span class="col-0">
+       <div style="    margin-top: 10px;
+    margin-left: 15px;
+    color: #fff;">
+            <Icon type="home" size="20"></Icon>
+        </div>
+        </span>
+      <span class="col-1" style="color:#fff">安心套餐</span>
     </header>
     <div>
-      <ul>
+      <ul style="margin-top: 10px;background-color: #fff;">
         <li v-for="item in list" :key="item">
+          <div style="border-top: 1px solid #ddd;border-bottom: 1px solid #ddd; width: 100%;height: 15px;">
+
+          </div>
           <div class="row" @click="getInfo();">
-            <div class="col-1">图片</div>
+            <div class="col-1">
+              <img src="http://img.yotafood.com/static/img/20180208/1518067448375.jpg">
+            </div>
             <div class="col-1"> 
-              <div>
-                  文本
+              <div style="margin: 0 0 5px;line-height: 1;font-weight: normal;text-align: left;color: #333;">
+                  高蛋白主菜盒
               </div>
-              <div>
-                 文本
+              <div style="font-size: 12px;margin: 7px 0 0;line-height: 1.2;text-align: left;color: #999;">
+                 澳洲谷饲牛肉片 / 雷笋炒肉丝 / 三鲜卷LB / 
               </div>
 
             </div>
@@ -24,6 +35,7 @@
         </li>
       </ul>
     </div>
+    <div style="margin-bottom:40px"></div>
    <ShopCart></ShopCart>
   </div>
 </template>
@@ -50,7 +62,7 @@ export default{
 <style scoped>
 header{
   display: flex;
-  background-color: aqua;
+  background: -webkit-linear-gradient(left, #f21111, #e56586);
   height: 40px;
 }
 .col-0{
@@ -59,13 +71,17 @@ header{
 .col-1{
   flex: 1;
   margin: 10px;
-  background-color: aqua
+  
+ 
 }
 li{
   list-style: none;
 }
 .row{
   display: flex
+}
+img{
+  width: 100%;
 }
 
 </style>

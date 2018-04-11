@@ -10,7 +10,7 @@
             </CarouselItem>
             <CarouselItem>
                 <div class="demo-carousel">
-                  <img src="static/1.jpg" alt="">
+                  <img src="static/fish.png" alt="">
                 </div>
             </CarouselItem>
             <CarouselItem>
@@ -20,7 +20,7 @@
             </CarouselItem>
             <CarouselItem>
                 <div class="demo-carousel">
-                  <img src="static/1.jpg" alt="">
+                  <img src="static/fish.png" alt="">
                 </div>
             </CarouselItem>
         </Carousel>
@@ -38,44 +38,37 @@
           </div>
       </div>
     </div>
-    <div class="img-box">
-
-    </div>
+    
     <div style="display:flex">
-      <div style="flex:1">
-        动态活动区
+      <div style="flex:1;background-color:#fff" >
+        <img src="http://weixin.yotafood.com/mobile/asset/imgs/recharge-guide.png?v=2" style="width: 90%;border-radius: 8px;">
       </div>
 
     </div>
      <div style="display:flex">
       <div style="flex:1" @click="list();">
-       安心套餐 
+      <img src=" http://weixin.yotafood.com/mobile/asset/imgs/4-3.png?v=1" alt="">
       </div>
 
     </div>
    <div style="display:flex">
       <div style="flex:1" @click="optionalmeal()">
-        自选套餐 
+        <img src=" http://weixin.yotafood.com/mobile/asset/imgs/4-4.png?v=1" alt="">
       </div>
 
     </div>
    
-   <div style="display:flex">
-     <div style="flex:1" @click="custommeal()">
-        量身套餐 
-      </div>
-
-    </div>
+  
     <div style="display:flex">
       <div style="flex:1">
-        量身套餐 普通模式
+        <img src=" http://weixin.yotafood.com/mobile/asset/imgs/4-5.png?v=1" alt="">
       </div>
        <div style="flex:1">
-         量身套餐 达人模式
+         <img src=" http://weixin.yotafood.com/mobile/asset/imgs/4-6.png?v=1" alt="">
       </div>
     </div>
    
-   
+   <div style="margin-bottom:40px;"></div>
     
      
     <Tabs></Tabs>
@@ -154,6 +147,7 @@ export default{
 .bar-index-quick-nav{
   display: flex;
   padding: 15px;
+  background-color: #fff;
 }
 .col{
   flex: 1;
@@ -170,6 +164,9 @@ footer{
   height: 60px;
   width: 100%;
   background-color: yellow
+}
+img{
+  width: 100%;
 }
 
 </style>

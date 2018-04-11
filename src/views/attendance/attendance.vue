@@ -146,10 +146,38 @@
       <div class="popup-mask hide"   v-bind:class="{show:show, hidden:!show}"></div>
       <div class="popup-meal-shop hide" v-bind:class="{show:show, hidden:!show}">
         <div @click="buy();">
-          关闭
+         <img  class="close-btn" src="http://weixin.yotafood.com/mobile/asset/css/imgs/sign/close.png" style="width: 16px;
+    float: right;">
         </div>
-        <div>
-          签到规则
+         <div class="box">
+            <div class="title"><span>签到规则</span></div>
+
+            <h4>一、参与方法</h4>
+            <p>1. 签到活动在移动端与微信公众号订餐平台视为同一活动：用户可在“我的”（右上角）签到或首页签到活动入口进入页面完成签到；</p>
+            <p>2. 每位用户每天仅限签到1次；</p>
+            <p>3. 若签到中断，连续签到记录将清零，奖励从第1天重新计算。</p>
+
+            <h4>二、奖励规则</h4>
+            <p>1. 用户每日签到所获奖励将于24小时内到达账户中，具体签到奖励如下：</p>
+            <p>开始签到第1天，送10积分；</p>
+            <p>连续签到第2天，送15积分；</p>
+            <p>连续签到第3天，送30积分；</p>
+            <p>连续签到第4天，送55积分；</p>
+            <p>连续签到第5天，送80积分；</p>
+            <p>连续签到第6天，送120积分；</p>
+            <p>连续签到第7天，送150积分；</p>
+            <p>2. 签到所获得积分可从页面“我的积分”或“我的-积分”中查询；</p>
+            <p>3. 积分可用于兑换相应优惠券，详情可在本签到活动了解。 </p>
+            
+        
+
+            <h4>三、积分有效期说明</h4>
+            <p>用户通过YOTA平台各类活动所获得的积分，将在积分获得后1年内有效，超过1年将自动清除。举例：小YO在2018年1月15日通过签到活动获得30积分，此30积分将在2019年1月14日作废。特此说明。</p>
+
+            <p>【帮助提示】</p>
+            <p>如您有疑问需要帮助或对签到活动有任何建议，欢迎您通过APP在线客服以及400-888-9417客户服务专线与我们联系。咨询回复时间周一至周日，9:00--19:00（春节等法定节假日除外）。</p>
+
+            <p>*YOTA可在法律法规允许范围内对本次活动规则进行解释</p>
         </div>
 
       </div>
@@ -395,5 +423,23 @@ export default{
     padding-top: 9px;
 }
 
+.popup-meal-shop .box {
+    text-align: left;
+    font-size: 14px;
+    max-height: 400px;
+    overflow-y: scroll;
+  
+}
+ .popup-meal-shop .box .title {
+  
+    text-align: center;
+    display: block;
+    height: 14px;
+    margin-bottom: 20px;
+}
+.popup-meal-shop .box h4 {
+    margin: 10px 0;
+    font-size: 14px;
+}
 </style>
 

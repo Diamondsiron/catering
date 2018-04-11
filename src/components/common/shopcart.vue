@@ -1,8 +1,9 @@
 <template>
   <footer>
           <div class="col-1">
-              <p>
-                购物车0.00
+              <p style="text-align: left;color:#fff">
+                <Icon type="ios-cart" size="20" color="white"></Icon>
+                ¥0.00
               </p>
             
             </div>
@@ -49,7 +50,8 @@ footer{
 .col-0{
    height: 60px;
   flex:0 0 90px;
-  background-color: rgb(237, 79, 78);
+  background-color: yellow;
+    color: #333;
 }
 .col-0>p{
   margin-top: 20px;

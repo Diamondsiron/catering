@@ -36,13 +36,13 @@
         
         <div class="scroll-box">
             <div class="block">
-                每天配送两次：<p class="f-red">1.午餐+下午加餐；2.晚餐+次日早餐+次日上午加餐</p>
+                每天配送两次：<p class="f-red" style="color: #c57784;">1.午餐+下午加餐；2.晚餐+次日早餐+次日上午加餐</p>
             </div>
             <div class="block">
                 <div class="block-header">选择方案</div>
                 <ul class="meal-items-list">
                   
-                        <li class="select on" days="30" productsid="264" productplanid="2622" seckillproductplanid="" seckillprice="" seckillguideprice="" guideprice="2340.00" price="1698.00">15天工作日极速纤体套餐（早餐+午餐+晚餐）</li>
+                        <li class="select on" style="color: #c57784;">15天工作日极速纤体套餐（早餐+午餐+晚餐）</li>
                   
                   
                   
@@ -152,6 +152,7 @@ export default{
     background-color: rgba(0,0,0,0.5);
 }
 .popup-meal-shop {
+    text-align: left;
     z-index: 11;
     background-color: #fff;
     position: fixed;
@@ -170,6 +171,7 @@ export default{
     font-size: 16px;
     line-height: 1;
     padding: 10px 0;
+        text-align: right;
 }
 .popup-meal-shop .scroll-box {
     max-height: 400px;
@@ -190,6 +192,10 @@ export default{
 .btn-red {
     background-color: #f7d632;
     color: #333;
+        float: right;
+    outline: none;
+    border: none;
+    border-radius: 8px;
 }
 
 </style>
