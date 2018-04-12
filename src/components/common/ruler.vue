@@ -30,7 +30,8 @@ export default{
   },
   methods:{
     init(){
-        var that = this;
+        
+     var that = this;
      var st;
      //滚动条实际长度
      var wrapperWidth=document.getElementById("rulerScroller").offsetWidth;
@@ -40,16 +41,20 @@ export default{
     var scale = Math.floor((maxWidth)/2/10+1)
      console.log(wrapperWidth,maxWidth,leftlimit);
      document.getElementById("rulerScroller").addEventListener("touchstart",function(e){
+       
        var touch = e.targetTouches[0];  
         st = touch.pageX;
      })
 
      document.getElementById("rulerScroller").addEventListener("touchmove",function(e){
+          
         var touch = e.targetTouches[0];
         var x = touch.pageX;
          var lf=document.getElementById("rulerScroller").offsetLeft
-         var nlf=lf+x-st;
-         
+         //控制速度的关键 因为挪动距离和value是对应的 修改挪动距离 速度随公式改变
+        // var nlf=(lf+x-st)/2;
+         var nlf=(lf+x-st)
+         console.log("nlf",nlf,"lf",lf,"x",x,"st",st)
          
          if(lf-leftlimit>0||-wrapperWidth+maxWidth>lf){
              
