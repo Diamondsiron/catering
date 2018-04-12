@@ -1,7 +1,9 @@
 <template>
   <div>
     <div>
-      <header>我的订单</header>
+      <header style="background-color:#fff">
+       <h4>我的订单</h4> 
+        </header>
       <div>
         <ul>
           <li v-for="item in list" :key="item" class="list-item" @click="getInfo();">
@@ -9,22 +11,23 @@
               <img class="list-img" src="http://img.yotafood.com/static/img/20170213/1486983688080.jpg">
                
               <span>
-                文字描述
+                麻辣鸡店
               </span>
               <span class="state">
-               状态
+               订单已送达
               </span>
               <span class="price">
-                价格
+               招牌麻辣鸡
               </span>
               <span class="num">
-                数量
+               12
               </span>
             </div>
           </li>
         </ul>
       </div>
     </div>
+    <div style="margin-bottom:40px"></div>
     <Tabs></Tabs>
   </div>
 </template>
@@ -33,7 +36,7 @@
     name:'',
     data(){
       return{
-        list:[0,1,2,3]
+        list:[0,1,2,3,4,5,6,7,8,9]
       }
     },
    methods:{
@@ -64,6 +67,8 @@
 li{
   list-style: none;
   margin-left: 20px;
+  margin-right: 20px;
+  background-color: #fff
 }
 .list-img{
     width: 80px;
