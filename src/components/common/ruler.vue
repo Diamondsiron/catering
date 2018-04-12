@@ -1,10 +1,10 @@
 <template>
-	<div id='box'>
-		<div id='value'><span class='value'>{{value}}</span><span id='unit'>cm</span></div>
-		<div id='rulerWrapper' class="rulerWrapper" ref="rulerWrapper" >
+	<div>
+		<div><span class='value'>{{value}}</span><span id='unit'>cm</span></div>
+		<div :id='rulerWrapper' class="rulerWrapper" >
             <img src="static/rulerWrapper-mask-left.png" alt="" class="rulerWrapper-mask-left">
             <img src="static/rulerWrapper-mask-right.png" alt="" class="rulerWrapper-mask-right">
-            <div class="rulerScroller" ref="rulerScroller" id="rulerScroller">
+            <div class="rulerScroller"  :id='rulerScroller'>
                 <div v-for="item in list" :key="item">
                 <span class='sizeNo'>{{item}}</span>
                 <ul >
@@ -20,6 +20,7 @@
 </template>
 <script>
 export default{
+  props: ['rulerWrapper','rulerScroller'],
   data(){
     return{
     list:[0,10,20,30,40,50,60,70,80,90],
@@ -34,38 +35,38 @@ export default{
      var that = this;
      var st;
      //滚动条实际长度
-     var wrapperWidth=document.getElementById("rulerScroller").offsetWidth;
+     var wrapperWidth=document.getElementById(that.rulerScroller).offsetWidth;
      //屏幕宽度
-    var maxWidth = document.getElementById("rulerWrapper").offsetWidth;
+    var maxWidth = document.getElementById(that.rulerWrapper).offsetWidth;
     var leftlimit =  Math.floor((maxWidth)/2+10)
     var scale = Math.floor((maxWidth)/2/10+1)
-     console.log(wrapperWidth,maxWidth,leftlimit);
-     document.getElementById("rulerScroller").addEventListener("touchstart",function(e){
+    // console.log(wrapperWidth,maxWidth,leftlimit);
+     document.getElementById(that.rulerScroller).addEventListener("touchstart",function(e){
        
        var touch = e.targetTouches[0];  
         st = touch.pageX;
      })
 
-     document.getElementById("rulerScroller").addEventListener("touchmove",function(e){
+     document.getElementById(that.rulerScroller).addEventListener("touchmove",function(e){
           
         var touch = e.targetTouches[0];
         var x = touch.pageX;
-         var lf=document.getElementById("rulerScroller").offsetLeft
+         var lf=document.getElementById(that.rulerScroller).offsetLeft
          //控制速度的关键 因为挪动距离和value是对应的 修改挪动距离 速度随公式改变
         // var nlf=(lf+x-st)/2;
          var nlf=(lf+x-st)
-         console.log("nlf",nlf,"lf",lf,"x",x,"st",st)
+       //  console.log("nlf",nlf,"lf",lf,"x",x,"st",st)
          
          if(lf-leftlimit>0||-wrapperWidth+maxWidth>lf){
              
                 return;
          }else{
              
-             document.getElementById("rulerScroller").style.left = nlf+"px";
+             document.getElementById(that.rulerScroller).style.left = nlf+"px";
          }
-         document.getElementById("rulerScroller").style.left = nlf+"px";
+         document.getElementById(that.rulerScroller).style.left = nlf+"px";
           that.value=Math.floor((leftlimit-nlf)/(10))>0?Math.floor((leftlimit-nlf)/(10)):0;
-         console.log(nlf,that.value,leftlimit)
+        // console.log(nlf,that.value,leftlimit)
          
 
          
@@ -73,12 +74,12 @@ export default{
 
      })
 
-     document.getElementById("rulerScroller").addEventListener("touchend",function(e){
-          var lf=document.getElementById("rulerScroller").offsetLeft
+     document.getElementById(that.rulerScroller).addEventListener("touchend",function(e){
+          var lf=document.getElementById(that.rulerScroller).offsetLeft
           if(lf>leftlimit){
-                document.getElementById("rulerScroller").style.left = leftlimit+"px"; 
+                document.getElementById(that.rulerScroller).style.left = leftlimit+"px"; 
           }else if(-wrapperWidth+maxWidth>lf){
-              document.getElementById("rulerScroller").style.left =-wrapperWidth+maxWidth+'px'
+              document.getElementById(that.rulerScroller).style.left =-wrapperWidth+maxWidth+'px'
                that.value=Math.floor(-(-wrapperWidth+maxWidth)/10+leftlimit/10)
           }
          //var pointerVal=Math.floor((limitLeft-nDis)/(10*param.mult));
@@ -86,7 +87,7 @@ export default{
 
      })
     //nlf = leftlimit-10*that.vlue
-     document.getElementById("rulerScroller").style.left =  leftlimit-10*that.value+'px'
+     document.getElementById(that.rulerScroller).style.left =  leftlimit-10*that.value+'px'
      console.log("初始值", leftlimit-10*that.value+'px')
       console.log("start");
     },

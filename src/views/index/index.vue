@@ -29,9 +29,7 @@
           <div class="col" @click="attendance();">
            签到
           </div>
-          <div class="col">
-           排餐
-          </div>
+         
           
           <div class="col" @click="recharge();">
             充值
@@ -46,13 +44,13 @@
 
     </div>
      <div style="display:flex">
-      <div style="flex:1" @click="list();">
+      <div style="flex:1;padding: 10px;" @click="list();">
       <img src=" http://weixin.yotafood.com/mobile/asset/imgs/4-3.png?v=1" alt="">
       </div>
 
     </div>
    <div style="display:flex">
-      <div style="flex:1" @click="optionalmeal()">
+      <div style="flex:1;padding: 10px;" @click="optionalmeal()">
         <img src=" http://weixin.yotafood.com/mobile/asset/imgs/4-4.png?v=1" alt="">
       </div>
 
@@ -60,10 +58,10 @@
    
   
     <div style="display:flex">
-      <div style="flex:1" @click="custommeal()">
+      <div style="flex:1;padding: 10px;" @click="custommeal()">
         <img src=" http://weixin.yotafood.com/mobile/asset/imgs/4-5.png?v=1" alt="">
       </div>
-       <div style="flex:1" @click="custommeal()">
+       <div style="flex:1;padding: 10px;" @click="custommeal()">
          <img src=" http://weixin.yotafood.com/mobile/asset/imgs/4-6.png?v=1" alt="">
       </div>
     </div>
@@ -167,6 +165,7 @@ footer{
 }
 img{
   width: 100%;
+      box-shadow: 5px 5px 2px #fff;
 }
 
 </style>
