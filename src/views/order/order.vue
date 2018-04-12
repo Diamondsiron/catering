@@ -39,7 +39,7 @@
           </li>
         </ul>
         <ul style="margin-top:10px;background-color: #fff;">
-           <h4 style="text-align: left;margin-left: 20px;">配送时间</h4>
+           <h4 style="text-align: left;margin-left: 20px;">配送信息</h4>
            <li class="list-item">
               <span class="title">送达时间</span>
              <span class="selective">尽快送达</span>
@@ -57,7 +57,7 @@
           </li>
         </ul>
         <ul style="margin-top:10px;background-color: #fff;">
-           <h4 style="text-align: left;margin-left: 20px;">配送时间</h4>
+           <h4 style="text-align: left;margin-left: 20px;">订单信息</h4>
            <li class="list-item">
               <span class="title">订单号</span>
              <span class="selective">8888888866666666</span>
