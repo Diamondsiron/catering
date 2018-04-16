@@ -2,8 +2,8 @@
 <div>
   <div class="main">
     <div class="form-box height80">
-        <input type="tel" name="phone" id="phone" placeholder="手机号码" class="border-b" style="height:41px">
-          <input type="password" name="password" id="password" placeholder="密码" style="height:38px">
+        <input type="tel" name="phone" id="phone" placeholder="手机号码" class="border-b h41" >
+          <input type="password" name="password" id="password" placeholder="密码" class="h38">
       </div>
       <div class="form">
         <input type="number" placeholder="验证码" class="yzm" name="code" id="code">
@@ -36,6 +36,12 @@ export default{
   
 </script>
 <style scoped>
+.h41{
+ height:41px
+}
+.h38{
+height:38px
+}
 .main {
     padding: 20px;
     text-align: left;

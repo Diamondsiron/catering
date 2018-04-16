@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <header style="background-color:#fff">
+      <header >
        <h4>我的订单</h4> 
         </header>
       <div>
@@ -52,6 +52,9 @@
     
   </script>
   <style scoped>
+  header{
+background-color:#fff
+  }
   .list-img-box {
     position: relative;
     padding-left: 90px;

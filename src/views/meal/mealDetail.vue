@@ -31,36 +31,26 @@
       <div class="row">
         <div class="col p10">
           <h4>高蛋白主菜盒</h4>
-           <p style="font-size: 12px;
-    text-align: left;">外婆菜炒鸡蛋 / （鸿运当头）墨西哥烹汁牛仔粒LM / 三鲜卷LB / </p>
+           <p class="name">外婆菜炒鸡蛋 / （鸿运当头）墨西哥烹汁牛仔粒LM / 三鲜卷LB / </p>
         </div>
         <div class="col p10">
           <h4>999+</h4>
           <p style="font-size: 12px;">用户评论</p> 
-          <button style="border-radius: 5px;border: none;font-size: 14px; width: 40px;">查看</button>
+          <button class="radius">查看</button>
         </div>
 
       </div>
-      <div style="text-align: left;margin-left: 10px;">
-        <span style="color: red; font-weight: bold;">$38.00</span>
-        <s style="color:rgb(153, 153, 153);margin-left: 5px;">$48.00</s> 
+      <div class="content">
+        <span >$38.00</span>
+        <s >$48.00</s> 
       </div>
       <div >
         <datebar></datebar>
       </div>
      
       <div>
-        <span  style="
-    margin: 0 auto;
-    font-size: 14px;
-">若需要随餐增加点心，汤品，可在订单确认页面购买</span>
-        <button @click="buy()" style="
-    width:  90%;
-    border-radius:  5px;
-    border:  none;
-    background-color: yellow;
-    color: #333;
-">购买套餐</button>
+        <span  class="m0">若需要随餐增加点心，汤品，可在订单确认页面购买</span>
+        <button @click="buy()" class="buy" >购买套餐</button>
       </div>
       <div>
         <div style="margin-bottom:60px"></div>
@@ -92,6 +82,32 @@ export default{
   
 </script>
 <style scoped>
+.content{
+text-align: left;margin-left: 10px;
+}
+.content span{
+color: red; font-weight: bold;
+}
+.content s{
+color:rgb(153, 153, 153);margin-left: 5px;
+}
+.radius{
+  border-radius: 5px;border: none;font-size: 14px; width: 40px;
+}
+.buy{
+   width:  90%;
+    border-radius:  5px;
+    border:  none;
+    background-color: yellow;
+    color: #333;
+
+}
+.m0{
+ margin: 0 auto;font-size: 14px;
+}
+.name{
+  font-size: 12px;text-align: left;
+}
 header{
   display: flex;
   background-color: aqua;

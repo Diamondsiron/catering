@@ -1,19 +1,12 @@
 <template>
   <div>
-    <header>
-      <span class="col-0">
-       <div style="    margin-top: 10px;
-    margin-left: 15px;
-    color: #fff;">
-            <Icon type="home" size="20"></Icon>
-        </div>
-        </span>
-      <span class="col-1" style="color:#fff">安心套餐</span>
-    </header>
+    <headers>
+      
+    </headers>
     <div>
-      <ul style="margin-top: 10px;background-color: #fff;">
+      <ul >
         <li v-for="item in list" :key="item">
-          <div style="border-top: 1px solid #ddd;border-bottom: 1px solid #ddd; width: 100%;height: 15px;">
+          <div class="interval">
 
           </div>
           <div class="row" @click="getInfo();">
@@ -21,10 +14,10 @@
               <img src="http://img.yotafood.com/static/img/20180208/1518067448375.jpg">
             </div>
             <div class="col-1"> 
-              <div style="margin: 0 0 5px;line-height: 1;font-weight: normal;text-align: left;color: #333;">
+              <div class="name" >
                   高蛋白主菜盒
               </div>
-              <div style="font-size: 12px;margin: 7px 0 0;line-height: 1.2;text-align: left;color: #999;">
+              <div class="content">
                  澳洲谷饲牛肉片 / 雷笋炒肉丝 / 三鲜卷LB / 
               </div>
 
@@ -48,6 +41,7 @@ export default{
   },
   components:{
     'ShopCart': () => import('@/components/common/shopcart.vue'),
+    'headers': () => import('@/components/common/headers.vue'),
   },
   methods:{
     getInfo(){
@@ -60,6 +54,18 @@ export default{
   
 </script>
 <style scoped>
+.name{
+  margin: 0 0 5px;line-height: 1;font-weight: normal;text-align: left;color: #333;
+}
+.content{
+  font-size: 12px;margin: 7px 0 0;line-height: 1.2;text-align: left;color: #999;
+}
+ul{
+  margin-top: 10px;background-color: #fff;
+}
+.interval{
+border-top: 1px solid #ddd;border-bottom: 1px solid #ddd; width: 100%;height: 15px;
+}
 header{
   display: flex;
   background: -webkit-linear-gradient(left, #f21111, #e56586);

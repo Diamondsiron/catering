@@ -1,11 +1,11 @@
 <template>
 	<div>
-		<div><span class='value'>{{value}}</span><span id='unit'>cm</span></div>
+		<div><span class='value'>{{value}}</span><span id='unit'>{{unit}}</span></div>
 		<div :id='rulerWrapper' class="rulerWrapper" >
             <img src="static/rulerWrapper-mask-left.png" alt="" class="rulerWrapper-mask-left">
             <img src="static/rulerWrapper-mask-right.png" alt="" class="rulerWrapper-mask-right">
             <div class="rulerScroller"  :id='rulerScroller'>
-                <div v-for="item in list" :key="item">
+                <div v-for="item in listss" :key="item">
                 <span class='sizeNo'>{{item}}</span>
                 <ul >
                     <li  v-for="item in lists" :key="item" ></li>
@@ -20,10 +20,10 @@
 </template>
 <script>
 export default{
-  props: ['rulerWrapper','rulerScroller'],
+  props: ['rulerWrapper','rulerScroller','unit','listss'],
   data(){
     return{
-    list:[0,10,20,30,40,50,60,70,80,90],
+    
     lists:[1,2,3,4,5,6,7,8,9] ,
     value:30
 

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-       <header style="background-color:#fff">
+       <header >
        <h4>我的订单</h4> 
         </header>
       
@@ -38,8 +38,8 @@
             
           </li>
         </ul>
-        <ul style="margin-top:10px;background-color: #fff;">
-           <h4 style="text-align: left;margin-left: 20px;">配送信息</h4>
+        <ul class="m0">
+           <h4>配送信息</h4>
            <li class="list-item">
               <span class="title">送达时间</span>
              <span class="selective">尽快送达</span>
@@ -56,8 +56,8 @@
             
           </li>
         </ul>
-        <ul style="margin-top:10px;background-color: #fff;">
-           <h4 style="text-align: left;margin-left: 20px;">订单信息</h4>
+        <ul class="m0">
+           <h4 >订单信息</h4>
            <li class="list-item">
               <span class="title">订单号</span>
              <span class="selective">8888888866666666</span>
@@ -100,6 +100,15 @@
     
   </script>
   <style scoped>
+.m0{
+  margin-top:10px;background-color: #fff;
+}
+.m0 h4{
+  text-align: left;margin-left: 20px;
+}
+header{
+  background-color:#fff
+}
 .list-item{
   text-align: left;
     background-color: #fff;

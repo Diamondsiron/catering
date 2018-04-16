@@ -2,13 +2,11 @@
 <template>
   <header>
       <span class="col-0">
-       <div style="    margin-top: 10px;
-    margin-left: 15px;
-    color: #fff;" @click="index()">
+       <div  @click="index()">
             <Icon type="home" size="20"></Icon>
         </div>
         </span>
-      <span class="col-1" style="color:#fff">安心套餐</span>
+      <span class="col-1 color_white" >安心套餐</span>
     </header>
   
 </template>
@@ -41,10 +39,16 @@ header{
 .col-1{
   flex: 1;
   margin: 10px;
-  
- 
-}
 
+}
+header div{
+  margin-top: 10px;
+  margin-left: 15px;
+  color: #fff;
+}
+.color_white{
+  color:#fff
+}
 </style>
 
 

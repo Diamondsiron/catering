@@ -1,7 +1,7 @@
 <template>
   <footer>
           <div class="col-1">
-              <p style="text-align: left;color:#fff">
+              <p >
                 <Icon type="ios-cart" size="20" color="white"></Icon>
                 ¥0.00
               </p>
@@ -45,6 +45,8 @@ footer{
 }
 .col-1>p{
   margin: 20px;
+  text-align: left;
+  color:#fff
   
 }
 .col-0{

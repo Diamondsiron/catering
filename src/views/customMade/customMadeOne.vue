@@ -16,7 +16,7 @@
     <div class="form-block form-block-margin-top">
         <h4 class="title">出生年份</h4>
         <div class="input-box">
-            <mu-date-picker hintText="1988-01-01" v-model="value" class="black-border" style="width:200px"/> 
+            <mu-date-picker hintText="1988-01-01" v-model="value" class="black-border w200"/> 
            
         </div>
     </div>
@@ -34,7 +34,7 @@
     data(){
 
       return{
-          value
+          value:''
       }
 
     },
@@ -49,6 +49,9 @@
 
 </script>
 <style scoped>
+.w200{
+    width:200px
+}
 .jk-q-guide .form-block {
     text-align: center;
     padding: 0;

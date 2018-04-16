@@ -16,14 +16,14 @@
       </div>
       <div class="form-block form-block-margin-top">
           <h4 class="title">身高</h4>
-         <rulerss rulerWrapper="rulerWrapper" rulerScroller="rulerScroller"></rulerss>
+         <rulerss rulerWrapper="rulerWrapper" rulerScroller="rulerScroller" unit="cm" :listss='array'></rulerss>
          
           
       </div>
       <div class="form-block">
           <h4 class="title">体重</h4>
           
-          <rulerss rulerWrapper="Wrapper" rulerScroller="Scroller"></rulerss>
+          <rulerss rulerWrapper="Wrapper" rulerScroller="Scroller" unit="kg" :listss='list'></rulerss>
           
       </div>
       <div class="form-block-btn form-block-margin-top">
@@ -40,7 +40,8 @@
     data(){
 
       return{
-
+          array:[0,10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200],
+          list:[0,10,20,30,40,50,60,70,80,90,100]
       }
 
     },

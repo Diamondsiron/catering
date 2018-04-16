@@ -7,7 +7,7 @@
             <div class="address-list-item-ft">
                 
                   <div class="default on"><i class="fa fa-check-square" aria-hidden="true"></i> 默认地址</div>
-                 <div class="btn-box" style="margin-top:-20px;">
+                 <div class="btn-box margin_20px" >
                     <div class="btn" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i> 修改</div>
                     <div class="btn" ><i class="fa fa-trash-o" aria-hidden="true"></i> 删除</div>
                 </div>
@@ -42,6 +42,9 @@
     
   </script>
   <style scoped>
+  .margin_20px{
+      margin-top:-20px;
+  }
   .address-list .address-list-item {
     margin-top: -1px;
     margin-bottom: 10px;

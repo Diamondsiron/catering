@@ -37,36 +37,36 @@
       </div>
     </div>
     
-    <div style="display:flex">
+    <div class="row">
       <div style="flex:1;background-color:#fff" >
-        <img src="http://weixin.yotafood.com/mobile/asset/imgs/recharge-guide.png?v=2" style="width: 90%;border-radius: 8px;">
+        <img src="http://weixin.yotafood.com/mobile/asset/imgs/recharge-guide.png?v=2" class="radius" >
       </div>
 
     </div>
-     <div style="display:flex">
-      <div style="flex:1;padding: 10px;" @click="list();">
+     <div class="row">
+      <div class="col-1" @click="list();">
       <img src=" http://weixin.yotafood.com/mobile/asset/imgs/4-3.png?v=1" alt="">
       </div>
 
     </div>
-   <div style="display:flex">
-      <div style="flex:1;padding: 10px;" @click="optionalmeal()">
+   <div class="row">
+      <div class="col-1" @click="optionalmeal()">
         <img src=" http://weixin.yotafood.com/mobile/asset/imgs/4-4.png?v=1" alt="">
       </div>
 
     </div>
    
   
-    <div style="display:flex">
-      <div style="flex:1;padding: 10px;" @click="custommeal()">
+    <div class="row">
+      <div class="col-1" @click="custommeal()">
         <img src=" http://weixin.yotafood.com/mobile/asset/imgs/4-5.png?v=1" alt="">
       </div>
-       <div style="flex:1;padding: 10px;" @click="custommeal()">
+       <div class="col-1" @click="custommeal()">
          <img src=" http://weixin.yotafood.com/mobile/asset/imgs/4-6.png?v=1" alt="">
       </div>
     </div>
    
-   <div style="margin-bottom:40px;"></div>
+   <div class="margin_40px"></div>
     
      
     <Tabs></Tabs>
@@ -133,6 +133,19 @@ export default{
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.radius{
+  width: 90%;border-radius: 8px;
+}
+.row{
+  display: flex;
+}
+.col-1{
+  flex:1;
+  padding: 10px;
+}
+.margin_40px{
+  margin-bottom:40px;
+}
 .container{
   width: 100%;
   height: 100%;
@@ -155,14 +168,7 @@ export default{
     background: none;
     height: 30px;
 }
-footer{
- position: fixed;
- display: flex;
-  bottom: 0px;
-  height: 60px;
-  width: 100%;
-  background-color: yellow
-}
+
 img{
   width: 100%;
       box-shadow: 5px 5px 2px #fff;

@@ -1,5 +1,5 @@
 <template>
-  <div style="height:100;background-color: #F2F2F2;">
+  <div class="hight_100">
     <div class="user-info">
       <ul>
             <a href="javascript:void(0)" @click="updatename()" ><li><span>Crazy银</span>姓名</li></a>
@@ -29,6 +29,10 @@
   }
 </script>
 <style scoped>
+.hight_100{
+ height:100;
+ background-color: #F2F2F2;
+}
     
 .user-info {
     background: #fff;

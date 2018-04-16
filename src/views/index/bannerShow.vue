@@ -36,17 +36,17 @@
         
         <div class="scroll-box">
             <div class="block">
-                每天配送两次：<p class="f-red" style="color: #c57784;">1.午餐+下午加餐；2.晚餐+次日早餐+次日上午加餐</p>
+                每天配送两次：<p class="f-red color_c" >1.午餐+下午加餐；2.晚餐+次日早餐+次日上午加餐</p>
             </div>
             <div class="block">
                 <div class="block-header">选择方案</div>
                 <ul class="meal-items-list">
                   
-                        <li class="select on" style="color: #c57784;">15天工作日极速纤体套餐（早餐+午餐+晚餐）</li>
+                        <li class="select on color_c" >15天工作日极速纤体套餐（早餐+午餐+晚餐）</li>
                   
                   
                   
-                  <div style="clear: both;"></div>
+                  <div class="clear"></div>
                   
                 </ul>
             </div>
@@ -56,7 +56,7 @@
         
         <div class="bottom-bar">
             <span class="f-red" id="price">￥1698.00</span>
-            <button class="btn btn-lg btn-red pull-right" style="width: 100px;" onclick="buyOperate()">下单</button>
+            <button class="btn btn-lg btn-red pull-right w100"  onclick="buyOperate()">下单</button>
         </div>
     </div>
       
@@ -64,6 +64,7 @@
   
 </template>
 <script>
+
 export default{
   data(){
     return{
@@ -97,6 +98,15 @@ export default{
   
 </script>
 <style scoped>
+.clear{
+    clear: both;
+}
+.w100{
+   width: 100px 
+}
+.color_c{
+    color: #c57784;
+}
 .day-14 .img-list img {
     display: block;
     width: 100%;

@@ -1,7 +1,7 @@
 <template>
  <div class="m-date-bar">
    <div class="m-date-bar-box">
-    <div class="u-day" date="2018-04-02" style="cursor:pointer" v-bind:class="{ 'on': isActive== index  }" v-for="(item,index) in list" :key="item.index" @click="check(index )">
+    <div class="u-day cursor" date="2018-04-02"  v-bind:class="{ 'on': isActive== index  }" v-for="(item,index) in list" :key="item.index" @click="check(index )">
 	            <h4>{{item.date}}</h4>
 	            <p>{{item.day}}
                
@@ -11,29 +11,29 @@
 
 
    </div>
-    <div style="width:300px">
-        <div style="display:flex">
-          <div style="flex:0 0 80px"><button class="btn" @click="changetime('0')" v-bind:class="{red:time=='0'}">午餐</button></div>
-          <div style="flex:1"> 
+    <div class="w300">
+        <div class="row">
+          <div class="col-0-80"><button class="btn" @click="changetime('0')" v-bind:class="{red:time=='0'}">午餐</button></div>
+          <div class="col-1"> 
               <button class="cut "  @click="cutlunch" ></button>
               <input class="num" v-model="lunch">
                <button class="add "  @click="addlunch" ></button>
           </div>
-          <div  style="flex:1"></div>
+          <div  class="col-1"></div>
         </div>
-        <div style="display:flex">
-           <div style="flex:0 0 80px"><button class="btn" @click="changetime('1')" v-bind:class="{red:time=='1'}">晚餐</button></div>
-          <div  style="flex:1">
+        <div class="row">
+           <div class="col-0-80"><button class="btn" @click="changetime('1')" v-bind:class="{red:time=='1'}">晚餐</button></div>
+          <div  class="col-1">
                <button class="cut " @click="cutsupper"></button>
               <input class="num" v-model="supper">
                <button class="add "  @click="addsupper"></button>
           </div>
-          <div  style="flex:1"></div>
+          <div  class="col-1"></div>
         </div>
-       <div style="display:flex">
-           <div style="flex:0 0 80px"><button class="btn" @click="changecombo('0')" v-bind:class="{red:combo=='0'}">单日</button></div>
-          <div  style="flex:1"><button class="btn" @click="changecombo('1')" v-bind:class="{red:combo=='1'}">3日</button></div>
-          <div  style="flex:1"><button class="btn" @click="changecombo('2')" v-bind:class="{red:combo=='2'}">7日</button></div>
+       <div class="row">
+           <div class="col-0-80"><button class="btn" @click="changecombo('0')" v-bind:class="{red:combo=='0'}">单日</button></div>
+          <div  class="col-1"><button class="btn" @click="changecombo('1')" v-bind:class="{red:combo=='1'}">3日</button></div>
+          <div  class="col-1"><button class="btn" @click="changecombo('2')" v-bind:class="{red:combo=='2'}">7日</button></div>
 
         </div>
       </div>
@@ -172,6 +172,21 @@ export default{
   
 </script>
 <style scoped>
+.row{
+  display: flex;
+}
+.col-1{
+  flex:1
+}
+.col-0-80{
+  flex:0 0 80px;
+}
+.w300{
+  width: 300px;
+}
+.cursor{
+  cursor:pointer
+}
 .m-date-bar {
     padding: 5px 30px;
     background-color: #F4F4F4;

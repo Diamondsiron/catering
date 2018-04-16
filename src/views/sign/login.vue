@@ -1,13 +1,13 @@
 <template>
 <div>
-  <div style="display:flex" class="top">
-    <div style="flex:1">普通登录</div>
-    <div  style="flex:1;border-left: 1px solid #CBCBCB;">短信快捷登录</div>
+  <div  class="top row">
+    <div class="col-1">普通登录</div>
+    <div class="col-1-b">短信快捷登录</div>
   </div>
   <div class="main">
     <div class="form-box height80">
-        <input type="tel" name="phone" id="phone" placeholder="手机号码" class="border-b" style="height:41px">
-          <input type="password" name="password" id="password" placeholder="密码" style="height:38px">
+        <input type="tel" name="phone" id="phone" placeholder="手机号码" class="border-b h41" >
+          <input type="password" name="password" id="password" placeholder="密码" class="h38" >
       </div>
       
       
@@ -33,6 +33,21 @@ export default{
   
 </script>
 <style scoped>
+.row{
+display:flex
+}
+.col-1{
+flex:1
+}
+.col-1-b{
+flex:1;border-left: 1px solid #CBCBCB;
+}
+.h41{
+ height:41px
+}
+.h38{
+height:38px
+}
 .main {
     padding: 20px;
     text-align: left;

@@ -3,8 +3,8 @@
     <headers>
       
     </headers>
-    <div style="display:flex">
-      <div style="flex:0 0 60px">
+    <div class="row">
+      <div class="col-0">
         <ul>
           <li class="aside" @click="changeOrder(0)" v-bind:class="{aside_choose:order==0}">蛋白质</li>
           <li class="aside"  @click="changeOrder(1)" v-bind:class="{aside_choose:order==1}">碳水类</li>
@@ -15,20 +15,20 @@
           <li class="aside"  @click="changeOrder(6)" v-bind:class="{aside_choose:order==6}">补剂类</li>
         </ul>
       </div>
-      <div style="flex:1;background-color: #fff;">
+      <div class="col-1-w">
       <ul>
         <li v-for="item in list" :key="item">
             <div class="row">
-              <div class="col-1" style=" margin: 10px;" @click="getInfo();">
+              <div class="col-1 m10"   @click="getInfo();">
                 <img src="http://img.yotafood.com/static/img/20171228/1514451167769.jpg">
 
               </div>
-              <div class="col-1" style=" margin-top:  10px;"> 
+              <div class="col-1 mt10"> 
                 <div>
                    <h4>极致纤体</h4>
                 </div>
-                <div style="text-align: left;margin-top: 25px;">
-                <span style="text-align: left; color: #ED4F4E; position: relative;height: 22px;margin-bottom: 5px;font-size: 14px;">￥38.00</span>
+                <div class="content">
+                <span class="price">￥38.00</span>
                 
                 <span class="num-control">
                                     <button class="cut operate "></button>
@@ -77,6 +77,28 @@ export default{
   
 </script>
 <style scoped>
+.row{
+  display:flex
+}
+.col-1-w{
+  flex:1;
+  background-color: #fff;
+}
+.col-0{
+  flex:0 0 60px
+}
+.m10{
+  margin: 10px;
+}
+.mt10{
+  margin-top:  10px;
+}
+.price{
+  text-align: left; color: #ED4F4E; position: relative;height: 22px;margin-bottom: 5px;font-size: 14px;
+}
+.content{
+  text-align: left;margin-top: 25px;
+}
 header{
   display: flex;
   background-color: aqua;
@@ -115,7 +137,7 @@ margin-top: 2px;
 .num-control button.cut {
     background: url(../../../static/cut.png) no-repeat center center;
     background-size: 20px 20px;
-     outline: none;
+    outline: none;
 }
 .num-control button {
     padding: 0;

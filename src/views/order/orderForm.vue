@@ -1,12 +1,12 @@
 <template>
-  <div style="background-color:#e6e6e6;">
+  <div class="content" >
     <div class="order-form">
       <img class="address-line" src="static/address-line.png">
       <ul>
-         <li class="list-item" style="padding-right:25px">
+         <li class="list-item pd25" >
            <div>
-             <p style="margin: 0; line-height: 1;font-size: 14px;"><span style="width: 69px;margin-right: 5px;display: inline-block;">123</span> 18388888888</p>
-             <p class="memo" style="color: #999;margin: 0;line-height: 1;font-size: 14px;"><span class="tag-blue">默认</span>北京市-&gt;朝阳区-&gt;朝阳区远洋新悦2期 123</p>
+             <p class="tel" ><span>123</span> 18388888888</p>
+             <p class="memo address" ><span class="tag-blue">默认</span>北京市-&gt;朝阳区-&gt;朝阳区远洋新悦2期 123</p>
              <img src="static/list-arrow.png" alt="" class="list-arrow">
            </div>
          
@@ -22,11 +22,11 @@
           <img src="static/list-arrow.png" alt="" class="list-arrow">
         </li>
       </ul>
-      <ul style="margin-top:10px;">
+      <ul class="margin-top-10">
         <li class="list-item">
           2018年04月10日 星期二
         </li>
-         <li class="list-item line" style="hight:76px">
+         <li class="list-item line" >
           <div class="list-img-box">
                 <img class="list-img" src="http://img.yotafood.com/static/img/20170213/1486983688080.jpg">
                 <p>【午餐】均衡瘦身：均衡纤体餐</p>
@@ -35,19 +35,19 @@
             </div>
         </li>
       </ul>
-       <ul style="margin-top:10px;background-color: #fff;">
+       <ul class="margin-top-10">
         <li class="list-item less">
           <span>餐品费</span>
           <span class="selective black">$38</span>
         </li>
           <li class="list-item line less">
           <span>配送费</span>
-          <span class="black" style="margin-left:160px">x1</span>
+          <span class="black margin-left-160" >x1</span>
            <span class="selective black">$6</span>
         </li>
          <li class="list-item line less">
           <span>包装费</span>
-          <span class="black" style="margin-left:160px">x1</span>
+          <span class="black margin-left-160" >x1</span>
            <span class="selective black">$3</span>
         </li>
           <li class="list-item line less">
@@ -63,7 +63,7 @@
           <span class="selective black">$47</span>
         </li>
       </ul>
-      <ul style="margin-top:10px;">
+      <ul class="margin-top-10">
         <li class="list-item h44">
           <span class="title">抵用券</span>
           <span class="selective red">无抵用券可用</span>
@@ -117,6 +117,27 @@
   
 </script>
 <style scoped>
+.pd25{
+  padding-right:25px
+}
+.margin-left-160{
+  margin-left:160px
+}
+.margin-top-10{
+  margin-top:10px;
+}
+.content{
+  background-color:#e6e6e6;
+}
+.address{
+  color: #999;margin: 0;line-height: 1;font-size: 14px;
+}
+.tel{
+  margin: 0; line-height: 1;font-size: 14px;
+}
+.tel span{
+  width: 69px;margin-right: 5px;display: inline-block;
+}
 .order-form{
   text-align: left;
   background-color: #e6e6e6;
@@ -229,13 +250,14 @@ footer{
     color: #999;
 }
 .less{
-      margin-left: 10px;
     padding-left: 10px;
     font-size: 14px;
-   
     height: 34px;
     padding-bottom: 10px;
     padding-top: 10px;
+}
+.less span{
+  margin-left: 10px
 }
 .black{
   color: black

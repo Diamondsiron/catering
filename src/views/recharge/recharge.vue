@@ -2,7 +2,7 @@
 <div>
   <div class="recharge">
       <div class="recharge-form">
-         <div class="tabs col-box" style="display:flex">
+         <div class="tabs col-box row">
             <div class="tab col t-r" >
                 <img class="phone" src="static/recharge-check-on.png" phone="18722372579">当前账号
             </div>
@@ -18,7 +18,7 @@
           <div class="count-card">
               <div class="count-card-l"></div>
               <div class="count-card-m">
-                  <div class="equation" style="padding-top:30px;">
+                  <div class="equation pt20" >
                       <div class="col-2">
                           <h4 id="payPrice">1000</h4>
                           <p>充值</p>
@@ -97,6 +97,12 @@
   }
 </script>
 <style scoped>
+.pt20{
+    padding-top:30px;
+}
+.row{
+    display:flex
+}
 .recharge .recharge-form {
     height: 110px;
     background-image: linear-gradient(-180deg, #33CFC0 0%, #1EBCC4 100%);

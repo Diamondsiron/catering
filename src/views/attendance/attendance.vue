@@ -146,8 +146,7 @@
       <div class="popup-mask hide"   v-bind:class="{show:show, hidden:!show}"></div>
       <div class="popup-meal-shop hide" v-bind:class="{show:show, hidden:!show}">
         <div @click="buy();">
-         <img  class="close-btn" src="http://weixin.yotafood.com/mobile/asset/css/imgs/sign/close.png" style="width: 16px;
-    float: right;">
+         <img  class="close-btn width_16" src="http://weixin.yotafood.com/mobile/asset/css/imgs/sign/close.png" >
         </div>
          <div class="box">
             <div class="title"><span>签到规则</span></div>
@@ -237,6 +236,10 @@ export default{
     background: url(../../../static/sign/sign-header-icon-dot.png) no-repeat center right;
     background-size: 21px 16px;
     background-color: #50E3C2;
+}
+.width_16{
+    width: 16px;
+    float: right;
 }
 .sign-header .sign-box {
     width: 120px;

@@ -1,9 +1,9 @@
 <template>
-  <div style="background-color:#e6e6e6;">
+  <div class="content">
     <div class="order-form">
      
       <ul>
-         <li class="list-item" style="padding-right:25px">
+         <li class="list-item padding-right-25" >
             <span class="title red">请完成支付，订单将在12分33秒后自动取消</span>
          
         </li>
@@ -15,19 +15,19 @@
 
        
       </ul>
-      <ul style="margin-top:10px;">
+      <ul class="margin-top-10">
          <li class="list-item" >
            <div>
-             <p style="margin: 0; line-height: 1;font-size: 14px;"><span style="width: 69px;margin-right: 5px;display: inline-block;">123</span> 18388888888</p>
-             <p class="memo" style="color: #999;margin: 0;line-height: 1;font-size: 14px;"><span class="tag-blue">默认</span>北京市-&gt;朝阳区-&gt;朝阳区远洋新悦2期 123</p>
+             <p class="tel"><span >123</span> 18388888888</p>
+             <p class="memo address" ><span class="tag-blue">默认</span>北京市-&gt;朝阳区-&gt;朝阳区远洋新悦2期 123</p>
             
            </div>
          
         </li>
       </ul>
-      <ul style="margin-top:10px;">
+      <ul class="margin-top-10">
        
-         <li class="list-item line" style="hight:76px">
+         <li class="list-item line" >
           <div class="list-img-box">
                 <img class="list-img" src="http://img.yotafood.com/static/img/20170213/1486983688080.jpg">
                 <p>【午餐】均衡瘦身：均衡纤体餐</p>
@@ -43,19 +43,19 @@
         </li>
 
       </ul>
-       <ul style="margin-top:10px;background-color: #fff;">
+       <ul class="margin-top-10">
         <li class="list-item less">
           <span>餐品费</span>
           <span class="selective black">$38</span>
         </li>
           <li class="list-item line less">
           <span>配送费</span>
-          <span class="black" style="margin-left:160px">x1</span>
+          <span class="black margin-left-160" >x1</span>
            <span class="selective black">$6</span>
         </li>
          <li class="list-item line less">
           <span>包装费</span>
-          <span class="black" style="margin-left:160px">x1</span>
+          <span class="black margin-left-160" >x1</span>
            <span class="selective black">$3</span>
         </li>
           <li class="list-item line less">
@@ -71,7 +71,7 @@
           <span class="selective red">$47</span>
         </li>
       </ul>
-      <div class="list-item margin-top-10" style="padding-top:10px;background-color:#f4f4f4;">
+      <div class="list-item pd10" >
 	    <div class="blcok img-box" onclick="app_prepaid()">
 	        <img src="static/index-four.png?v=2">
 	    </div>
@@ -101,6 +101,30 @@
   
 </script>
 <style scoped>
+.pd10{
+    padding-top:10px;background-color:#f4f4f4;
+}
+.padding-right-25{
+    padding-right:25px
+}
+.tel{
+    margin: 0; line-height: 1;font-size: 14px;
+}
+.tel span{
+    width: 69px;margin-right: 5px;display: inline-block;
+}
+.address{
+    color: #999;margin: 0;line-height: 1;font-size: 14px;
+}
+.margin-top-10{
+    margin-top:10px;background-color: #fff;
+}
+.margin-left-160{
+    margin-left:160px
+}
+.content{
+    background-color:#e6e6e6;
+}
 .order-form{
   text-align: left;
   background-color: #e6e6e6;
