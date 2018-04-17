@@ -33,62 +33,68 @@
   </div>
 </template>
 <script>
-export default{
-  data(){
-    return{
-      list:[1,2,3,4]
-    }
+export default {
+  data() {
+    return {
+      list: [1, 2, 3, 4]
+    };
   },
-  components:{
-    'ShopCart': () => import('@/components/common/shopcart.vue'),
-    'headers': () => import('@/components/common/headers.vue'),
+  components: {
+    ShopCart: () => import("@/components/common/shopcart.vue"),
+    headers: () => import("@/components/common/headers.vue")
   },
-  methods:{
-    getInfo(){
-      this.$router.push({name:'mealdetail'})
+  methods: {
+    getInfo() {
+      this.$router.push({ name: "mealdetail" });
     }
   }
-  
-
-}
-  
+};
 </script>
 <style scoped>
-.name{
-  margin: 0 0 5px;line-height: 1;font-weight: normal;text-align: left;color: #333;
+.name {
+  margin: 0 0 5px;
+  line-height: 1;
+  font-weight: normal;
+  text-align: left;
+  color: #333;
 }
-.content{
-  font-size: 12px;margin: 7px 0 0;line-height: 1.2;text-align: left;color: #999;
+.content {
+  font-size: 12px;
+  margin: 7px 0 0;
+  line-height: 1.2;
+  text-align: left;
+  color: #999;
 }
-ul{
-  margin-top: 10px;background-color: #fff;
+ul {
+  margin-top: 10px;
+  background-color: #fff;
 }
-.interval{
-border-top: 1px solid #ddd;border-bottom: 1px solid #ddd; width: 100%;height: 15px;
+.interval {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+  height: 15px;
 }
-header{
+header {
   display: flex;
   background: -webkit-linear-gradient(left, #f21111, #e56586);
   height: 40px;
 }
-.col-0{
-  flex:0,0,40px
+.col-0 {
+  flex: 0, 0, 40px;
 }
-.col-1{
+.col-1 {
   flex: 1;
   margin: 10px;
-  
- 
 }
-li{
+li {
   list-style: none;
 }
-.row{
-  display: flex
+.row {
+  display: flex;
 }
-img{
+img {
   width: 100%;
 }
-
 </style>
 

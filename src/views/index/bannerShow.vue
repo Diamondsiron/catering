@@ -64,149 +64,136 @@
   
 </template>
 <script>
-
-export default{
-  data(){
-    return{
-       bottomPopup: false,
+export default {
+  data() {
+    return {
+      bottomPopup: false,
       topPopup: false,
       leftPopup: false,
       rightPopup: false,
-      show:false,
-
-    }
+      show: false
+    };
   },
-  methods:{
-    notice(){
-      this.$router.push({ name: 'notice'})
-
+  methods: {
+    notice() {
+      this.$router.push({ name: "notice" });
     },
-    buy(){
+    buy() {
       this.show = !this.show;
-
     },
-     open (position) {
-      
-    },
-    close (position) {
-      
-    }
-
+    open(position) {},
+    close(position) {}
   }
-
-}
-  
+};
 </script>
 <style scoped>
-.clear{
-    clear: both;
+.clear {
+  clear: both;
 }
-.w100{
-   width: 100px 
+.w100 {
+  width: 100px;
 }
-.color_c{
-    color: #c57784;
+.color_c {
+  color: #c57784;
 }
 .day-14 .img-list img {
-    display: block;
-    width: 100%;
+  display: block;
+  width: 100%;
 }
 .day-14 .day-14-buy-height {
-    height: 50px;
+  height: 50px;
 }
 .day-14 .day-14-buy {
-    border-top: 1px solid #ededed;
-    height: 50px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #fff;
+  border-top: 1px solid #ededed;
+  height: 50px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
 }
-.footer{
- position: fixed;
- display: flex;
+.footer {
+  position: fixed;
+  display: flex;
   bottom: 0px;
   height: 50px;
- 
+
   width: 100%;
   background-color: rgb(92, 92, 86);
-  justify-content:center;
-   align-items:center;
+  justify-content: center;
+  align-items: center;
 }
-.col{
+.col {
   flex: 1;
- 
 }
-.col>.btn_y{
+.col > .btn_y {
   background-color: #f6ed54;
-    font-weight: normal;
-        border: none;
-    width: 100%;
-    height: 50px;
+  font-weight: normal;
+  border: none;
+  width: 100%;
+  height: 50px;
 }
-.col>.btn_n{
-  background-color:rgb(92, 92, 86);
-    font-weight: normal;
-        border: none;
-    width: 100%;
-    height: 50px;
+.col > .btn_n {
+  background-color: rgb(92, 92, 86);
+  font-weight: normal;
+  border: none;
+  width: 100%;
+  height: 50px;
 }
 .popup-mask {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
-    background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .popup-meal-shop {
-    text-align: left;
-    z-index: 11;
-    background-color: #fff;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 10px;
+  text-align: left;
+  z-index: 11;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
 }
-.show{
+.show {
   display: block;
 }
-.hidden{
-   display: none;
+.hidden {
+  display: none;
 }
 .popup-meal-shop .header {
-    font-size: 16px;
-    line-height: 1;
-    padding: 10px 0;
-        text-align: right;
+  font-size: 16px;
+  line-height: 1;
+  padding: 10px 0;
+  text-align: right;
 }
 .popup-meal-shop .scroll-box {
-    max-height: 400px;
-    overflow-x: hidden;
-    overflow-y: scroll;
+  max-height: 400px;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 .popup-meal-shop .block {
-    margin-top: 10px;
-    font-size: 14px;
+  margin-top: 10px;
+  font-size: 14px;
 }
 .popup-meal-shop .bottom-bar {
-    border-top: 1px solid #bbb;
-    padding: 10px 0 0;
+  border-top: 1px solid #bbb;
+  padding: 10px 0 0;
 }
 .popup-meal-shop .bottom-bar span {
-    line-height: 33px;
+  line-height: 33px;
 }
 .btn-red {
-    background-color: #f7d632;
-    color: #333;
-        float: right;
-    outline: none;
-    border: none;
-    border-radius: 8px;
+  background-color: #f7d632;
+  color: #333;
+  float: right;
+  outline: none;
+  border: none;
+  border-radius: 8px;
 }
-
 </style>
 

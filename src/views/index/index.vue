@@ -45,13 +45,13 @@
     </div>
      <div class="row">
       <div class="col-1" @click="list();">
-      <img src=" http://weixin.yotafood.com/mobile/asset/imgs/4-3.png?v=1" alt="">
+      <img src="static/3.png" alt="">
       </div>
 
     </div>
    <div class="row">
       <div class="col-1" @click="optionalmeal()">
-        <img src=" http://weixin.yotafood.com/mobile/asset/imgs/4-4.png?v=1" alt="">
+        <img src="static/2.png" alt="">
       </div>
 
     </div>
@@ -59,10 +59,10 @@
   
     <div class="row">
       <div class="col-1" @click="custommeal()">
-        <img src=" http://weixin.yotafood.com/mobile/asset/imgs/4-5.png?v=1" alt="">
+        <img src="static/5.png" alt="">
       </div>
        <div class="col-1" @click="custommeal()">
-         <img src=" http://weixin.yotafood.com/mobile/asset/imgs/4-6.png?v=1" alt="">
+         <img src="static/6.png" alt="">
       </div>
     </div>
    
@@ -75,104 +75,102 @@
   </div>
 </template>
 <script>
-import axios from 'axios';
-export default{
-  name:'index',
-  data () {
-            return {
-                value1: 0
-            }
-        },
-  components:{
-   'Tabs': () => import('@/components/common/tabs.vue'),
+import axios from "axios";
+export default {
+  name: "index",
+  data() {
+    return {
+      value1: 0
+    };
   },
-  methods:{
-     promise(){
-       var date=new Date();
-      var timer=date.getTime().toString();
-      axios.get("api"+'?'+timer).then(function(res){
-          console.log(res.data.msg);
-          return res
-        })
+  components: {
+    Tabs: () => import("@/components/common/tabs.vue")
+  },
+  methods: {
+    promise() {
+      var date = new Date();
+      var timer = date.getTime().toString();
+      axios.get("api" + "?" + timer).then(function(res) {
+        console.log(res.data.msg);
+        return res;
+      });
     },
-    
-    async(){
 
+    async() {},
+    bannershow() {
+      this.$router.push({ name: "bannershow" });
     },
-    bannershow(){
-      this.$router.push({name:'bannershow'})
+    list() {
+      this.$router.push({ name: "list" });
     },
-    list(){
-       this.$router.push({name:'list'})
+    optionalmeal() {
+      this.$router.push({ name: "optionalmeal" });
     },
-    optionalmeal(){
-       this.$router.push({name:'optionalmeal'})
+    custommeal() {
+      this.$router.push({ name: "custommadeone" });
     },
-    custommeal(){
-       this.$router.push({name:'custommadeone'})
+    attendance() {
+      this.$router.push({ name: "attendance" });
     },
-    attendance(){
-      this.$router.push({name:'attendance'})
+    recharge() {
+      this.$router.push({ name: "recharge" });
     },
-    recharge(){
-      this.$router.push({name:'recharge'})
-    },
-    ajax(){
-      return new Promise(function(resolve, reject){
-          resolve(axios.get("api"+'?t='+timer).then(function(res){
-          console.log(res.data.msg);
-          return res
-        }))
-      })
+    ajax() {
+      return new Promise(function(resolve, reject) {
+        resolve(
+          axios.get("api" + "?t=" + timer).then(function(res) {
+            console.log(res.data.msg);
+            return res;
+          })
+        );
+      });
     }
-
   }
-
-}
-  
+};
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.radius{
-  width: 90%;border-radius: 8px;
+.radius {
+  width: 90%;
+  border-radius: 8px;
 }
-.row{
+.row {
   display: flex;
+  background-color: white;
 }
-.col-1{
-  flex:1;
+.col-1 {
+  flex: 1;
   padding: 10px;
 }
-.margin_40px{
-  margin-bottom:40px;
+.margin_40px {
+  margin-bottom: 40px;
 }
-.container{
+.container {
   width: 100%;
   height: 100%;
   display: block;
 }
-.demo-carousel{
+.demo-carousel {
   background-color: red;
   height: 200px;
 }
-.bar-index-quick-nav{
+.bar-index-quick-nav {
   display: flex;
   padding: 15px;
   background-color: #fff;
 }
-.col{
+.col {
   flex: 1;
 }
-.img-box{
-      padding: 0 10px;
-    background: none;
-    height: 30px;
+.img-box {
+  padding: 0 10px;
+  background: none;
+  height: 30px;
 }
 
-img{
+img {
   width: 100%;
-      box-shadow: 5px 5px 2px #fff;
+  box-shadow: 5px 5px 2px #fff;
 }
-
 </style>
 

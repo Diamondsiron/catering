@@ -52,131 +52,130 @@
   </div>
 </template>
 <script>
-export default{
-  data(){
-    return{
-      list:[1,2,3,4,5,6,7,8],
-      order:0,
-    }
+export default {
+  data() {
+    return {
+      list: [1, 2, 3, 4, 5, 6, 7, 8],
+      order: 0
+    };
   },
-  components:{
-     'headers': () => import('@/components/common/headers.vue'),
-    'ShopCart': () => import('@/components/common/shopcart.vue'),
+  components: {
+    headers: () => import("@/components/common/headers.vue"),
+    ShopCart: () => import("@/components/common/shopcart.vue")
   },
-  methods:{
-    getInfo(){
-      this.$router.push({name:'mealdetail'})
+  methods: {
+    getInfo() {
+      this.$router.push({ name: "mealdetail" });
     },
-    changeOrder(value){
+    changeOrder(value) {
       this.order = value;
     }
   }
-  
-
-}
-  
+};
 </script>
 <style scoped>
-.row{
-  display:flex
+.row {
+  display: flex;
 }
-.col-1-w{
-  flex:1;
+.col-1-w {
+  flex: 1;
   background-color: #fff;
 }
-.col-0{
-  flex:0 0 60px
+.col-0 {
+  flex: 0 0 60px;
 }
-.m10{
+.m10 {
   margin: 10px;
 }
-.mt10{
-  margin-top:  10px;
+.mt10 {
+  margin-top: 10px;
 }
-.price{
-  text-align: left; color: #ED4F4E; position: relative;height: 22px;margin-bottom: 5px;font-size: 14px;
+.price {
+  text-align: left;
+  color: #ed4f4e;
+  position: relative;
+  height: 22px;
+  margin-bottom: 5px;
+  font-size: 14px;
 }
-.content{
-  text-align: left;margin-top: 25px;
+.content {
+  text-align: left;
+  margin-top: 25px;
 }
-header{
+header {
   display: flex;
   background-color: aqua;
   height: 40px;
 }
-.col-0{
-  flex:0,0,40px
+.col-0 {
+  flex: 0, 0, 40px;
 }
-.col-1{
+.col-1 {
   flex: 1;
- 
- 
 }
-li{
+li {
   list-style: none;
- 
 }
-.aside{
-    background-color: #f2f2f2;
-    
+.aside {
+  background-color: #f2f2f2;
 }
-.aside_choose{
+.aside_choose {
   background-color: #fff;
 }
-.row{
-  display: flex
+.row {
+  display: flex;
 }
-img{
+img {
   width: 100%;
 }
 .num-control {
-    position: absolute;
-margin-top: 2px;
-    right: 5px;
+  position: absolute;
+  margin-top: 2px;
+  right: 5px;
 }
 .num-control button.cut {
-    background: url(../../../static/cut.png) no-repeat center center;
-    background-size: 20px 20px;
-    outline: none;
+  background: url(../../../static/cut.png) no-repeat center center;
+  background-size: 20px 20px;
+  outline: none;
 }
 .num-control button {
-    padding: 0;
-    height: 20px;
-    width: 20px;
-    border: none;
-    display: inline-block;
-     outline: none;
+  padding: 0;
+  height: 20px;
+  width: 20px;
+  border: none;
+  display: inline-block;
+  outline: none;
 }
 .num-control .num {
-    display: inline-block;
-    vertical-align: top;
-    font-size: 11px;
-    line-height: 18px;
-    height: 18px;
-    margin: 0;
-    padding: 0 2px;
-    width: 28px;
-    text-align: center;
-    border: 1px solid #ddd;
-    color: #333;
-    outline: 0;
-    box-shadow: none;
-    border-radius: 0;
-    -webkit-appearance: none;
-     outline: none;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 11px;
+  line-height: 18px;
+  height: 18px;
+  margin: 0;
+  padding: 0 2px;
+  width: 28px;
+  text-align: center;
+  border: 1px solid #ddd;
+  color: #333;
+  outline: 0;
+  box-shadow: none;
+  border-radius: 0;
+  -webkit-appearance: none;
+  outline: none;
 }
 .num-control button.add {
-    background: url(../../../static/add.png) no-repeat center center;
-    background-size: 20px 20px;
-     outline: none;
+  background: url(../../../static/add.png) no-repeat center center;
+  background-size: 20px 20px;
+  outline: none;
 }
 .num-control button {
-    padding: 0;
-    height: 20px;
-    width: 20px;
-    border: none;
-    display: inline-block;
-     outline: none;
+  padding: 0;
+  height: 20px;
+  width: 20px;
+  border: none;
+  display: inline-block;
+  outline: none;
 }
 </style>
 

@@ -1,8 +1,8 @@
 <template>
   <footer>
-          <div class="col">
+          <div class="col choose">
 
-              <router-link :to="{ path: '/index'}"  slot="header"><Icon type="home" size="20"></Icon><div >首页</div></router-link>
+              <router-link :to="{ path: '/index'}"  slot="header"><Icon type="home" size="20" color="#428bca"></Icon><div class="choose">首页</div></router-link>
             </div>
            
             <div class="col">
@@ -14,35 +14,36 @@
   
 </template>
 <script>
-  export default{
-
+export default {
+  data(){
+    return{}
   }
+};
 </script>
 <style scoped>
-footer{
- position: fixed;
- display: flex;
+
+footer {
+  position: fixed;
+  display: flex;
   bottom: 0px;
   height: 50px;
- 
   width: 100%;
   background-color: #fff;
-  justify-content:center;
-   align-items:center;
+  justify-content: center;
+  align-items: center;
 }
-.col{
+.col {
   flex: 1;
- 
 }
-.col div{
-  
-   margin-top: -5px;
-    font-size: 12px; 
-  
+.col div {
+  margin-top: -5px;
+  font-size: 12px;
 }
-a{
+a {
   color: #929292;
 }
-
+.choose{
+  color:#428bca;
+}
 </style>
 

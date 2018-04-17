@@ -32,83 +32,77 @@
   </div>
 </template>
   <script>
-  export default{
-    name:'',
-    data(){
-      return{
-        list:[0,1,2,3,4,5,6,7,8,9]
-      }
-    },
-   methods:{
-     getInfo(){
-        this.$router.push({name:'order'})
-      }
-   },
-    components:{
-      'Tabs': () => import('@/components/common/tabs.vue'),
+export default {
+  name: "",
+  data() {
+    return {
+      list: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    };
+  },
+  methods: {
+    getInfo() {
+      this.$router.push({ name: "order" });
     }
-    
+  },
+  components: {
+    Tabs: () => import("@/components/common/tabs.vue")
   }
-    
-  </script>
+};
+</script>
   <style scoped>
-  header{
-background-color:#fff
-  }
-  .list-img-box {
-    position: relative;
-    padding-left: 90px;
-    padding-bottom: 28px;
-    text-align: left;
-    
-
+header {
+  background-color: #fff;
 }
-.list-item{
-    margin-top: 20px;
-    height: 70px;
+.list-img-box {
+  position: relative;
+  padding-left: 90px;
+  padding-bottom: 28px;
+  text-align: left;
 }
-li{
+.list-item {
+  margin-top: 20px;
+  height: 70px;
+}
+li {
   list-style: none;
   margin-left: 20px;
   margin-right: 20px;
-  background-color: #fff
+  background-color: #fff;
 }
-.list-img{
-    width: 80px;
-    height: 60px;
-    position: absolute;
-    left: 0;
-    top: 0;
+.list-img {
+  width: 80px;
+  height: 60px;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
-  .list-img-box p{
-    margin: 0;
-    line-height: 1;
-    font-size: 14px;
-  }
+.list-img-box p {
+  margin: 0;
+  line-height: 1;
+  font-size: 14px;
+}
 .price {
-    position: absolute;
-    bottom: 0;
-    left: 90px;
-    font-size: 14px;
-    color: #f05d46;
+  position: absolute;
+  bottom: 0;
+  left: 90px;
+  font-size: 14px;
+  color: #f05d46;
 }
 .num {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    font-size: 14px;
-    color: #999;
-    right: 30px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 14px;
+  color: #999;
+  right: 30px;
 }
-.state{
-     position: absolute;
-    bottom: 30px;
-    right: 0;
-    font-size: 14px;
-    color: #999;
-    right: 30px;
-
+.state {
+  position: absolute;
+  bottom: 30px;
+  right: 0;
+  font-size: 14px;
+  color: #999;
+  right: 30px;
 }
-  
-  </style>
+</style>
   

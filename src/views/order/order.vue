@@ -82,58 +82,53 @@
   </div>
 </template>
   <script>
-  export default{
-    name:'',
-    data(){
-      return{
-        list:[0,1,2,3]
-      }
-    },
-    methodes:{
-
-    },
-    components:{
-      'Tabs': () => import('@/components/common/tabs.vue'),
-    }
-    
+export default {
+  name: "",
+  data() {
+    return {
+      list: [0, 1, 2, 3]
+    };
+  },
+  methodes: {},
+  components: {
+    Tabs: () => import("@/components/common/tabs.vue")
   }
-    
-  </script>
+};
+</script>
   <style scoped>
-.m0{
-  margin-top:10px;background-color: #fff;
+.m0 {
+  margin-top: 10px;
+  background-color: #fff;
 }
-.m0 h4{
-  text-align: left;margin-left: 20px;
-}
-header{
-  background-color:#fff
-}
-.list-item{
+.m0 h4 {
   text-align: left;
-    background-color: #fff;
-    padding: 15px 20px;
-    position: relative;
-    
+  margin-left: 20px;
 }
-.title{
-   margin-top: -7px;
-      line-height: 1;
-    font-size: 14px;
-  
+header {
+  background-color: #fff;
 }
-.selective{
-    position: absolute;
-    top: 50%;
-    right: 30px;
-    color: #999;
-    line-height: 1;
-    font-size: 14px;
-    margin-top: -7px;
+.list-item {
+  text-align: left;
+  background-color: #fff;
+  padding: 15px 20px;
+  position: relative;
 }
-li{
+.title {
+  margin-top: -7px;
+  line-height: 1;
+  font-size: 14px;
+}
+.selective {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  color: #999;
+  line-height: 1;
+  font-size: 14px;
+  margin-top: -7px;
+}
+li {
   border-bottom: 1px solid #e6e6e6;
 }
-  
-  </style>
+</style>
   

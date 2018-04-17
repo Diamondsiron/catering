@@ -14,29 +14,32 @@
   
 </template>
 <script>
-  export default{
-
-  }
+export default {
+  data() {
+    return {};
+  },
+  methods: {}
+};
 </script>
 <style scoped>
 .day-14 .day-14-info {
-    padding: 10px 20px;
-    text-align: left;
+  padding: 10px 20px;
+  text-align: left;
 }
 .day-14 .day-14-info p {
-    margin: 10px 0;
-    padding-left: 10px;
-    line-height: 1.4;
-    color: #666;
-    font-size: 14px;
+  margin: 10px 0;
+  padding-left: 10px;
+  line-height: 1.4;
+  color: #666;
+  font-size: 14px;
 }
 .day-14 .day-14-info h4 {
-    margin: 15px 0;
-    line-height: 1;
-    color: #333;
-    font-size: 16px;
-    border-left: 3px solid #00BC9B;
-    padding-left: 10px;
+  margin: 15px 0;
+  line-height: 1;
+  color: #333;
+  font-size: 16px;
+  border-left: 3px solid #00bc9b;
+  padding-left: 10px;
 }
 </style>
 

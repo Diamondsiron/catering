@@ -24,6 +24,9 @@
     },
     components:{
       'Tabs': () => import('@/components/common/tabs.vue'),
+    },
+    methods:{
+        
     }
     
   }

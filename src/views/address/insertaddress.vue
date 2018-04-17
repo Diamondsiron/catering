@@ -55,225 +55,236 @@
   
 </template>
 <script>
-  export default{
-    name:'',
-    data(){
-      return{
-          value:'',
-          list:[],
-          checks:'',
-          show:true
-          
-      }
-    },
-    components:{
-      'Tabs': () => import('@/components/common/tabs.vue'),
-      'Maps': () => import('@/components/common/map.vue'),
-    },
-    watch:{
-        value(){
-            console.log(this.value)
-            this.search(this.value)
-        }
-    },
-    methods:{
-        init(){
-        var map = new BMap.Map("allmap");    // 创建Map实例
-        map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
-       
-         
-       map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
-        map.enableScrollWheelZoom(true);  
-        var geolocation = new BMap.Geolocation();
-        geolocation.getCurrentPosition(function(r){
-         if(this.getStatus() == BMAP_STATUS_SUCCESS){
+export default {
+  name: "",
+  data() {
+    return {
+      value: "",
+      list: [],
+      checks: "",
+      show: true
+    };
+  },
+  components: {
+    Tabs: () => import("@/components/common/tabs.vue"),
+    Maps: () => import("@/components/common/map.vue")
+  },
+  watch: {
+    value() {
+      console.log(this.value);
+      this.search(this.value);
+    }
+  },
+  methods: {
+    init() {
+      var map = new BMap.Map("allmap"); // 创建Map实例
+      map.centerAndZoom(new BMap.Point(116.404, 39.915), 11); // 初始化地图,设置中心点坐标和地图级别
+
+      map.setCurrentCity("北京"); // 设置地图显示的城市 此项是必须设置的
+      map.enableScrollWheelZoom(true);
+      var geolocation = new BMap.Geolocation();
+      geolocation.getCurrentPosition(
+        function(r) {
+          if (this.getStatus() == BMAP_STATUS_SUCCESS) {
             var mk = new BMap.Marker(r.point);
             map.addOverlay(mk);
             map.panTo(r.point);
-        // alert('您的位置：'+r.point.lng+','+r.point.lat);
-            }
-            else {
+            // alert('您的位置：'+r.point.lng+','+r.point.lat);
+          } else {
             //alert('failed'+this.getStatus());
-            }        
-            },{enableHighAccuracy: true})
-            var geoc = new BMap.Geocoder();   
-            map.addEventListener("click",function(e){
-                //console.log(e.address);
-                //alert(e.point.lng + "," + e.point.lat);
-                var pt = e.point;
-                geoc.getLocation(pt, function(rs){
-                    var addComp = rs.addressComponents;
-                    alert(addComp.province + ", " + addComp.city + ", " + addComp.district + ", " + addComp.street + ", " + addComp.streetNumber);
-                });
-            });
-        
-       window.map = map;//将map变量存储在全局
+          }
+        },
+        { enableHighAccuracy: true }
+      );
+      var geoc = new BMap.Geocoder();
+      map.addEventListener("click", function(e) {
+        //console.log(e.address);
+        //alert(e.point.lng + "," + e.point.lat);
+        var pt = e.point;
+        geoc.getLocation(pt, function(rs) {
+          var addComp = rs.addressComponents;
+          alert(
+            addComp.province +
+              ", " +
+              addComp.city +
+              ", " +
+              addComp.district +
+              ", " +
+              addComp.street +
+              ", " +
+              addComp.streetNumber
+          );
+        });
+      });
 
-      },
-      showpopup(){
-          this.show = !this.show
-      },
-      search(value){
-        
-          var that = this
-          var options = {
-            onSearchComplete: function(results){
-                // 判断状态是否正确
-                if (local.getStatus() == BMAP_STATUS_SUCCESS){
-                    var s = [];
-                    for (var i = 0; i < results.getCurrentNumPois(); i ++){
-                        console.log(results);
-                        s.push(results.getPoi(i).city+','+ results.getPoi(i).address + ", " + results.getPoi(i).title);
-                    }
-                   // if (results.getPageIndex() < results.getNumPages() - 1){
-                     //   local.gotoPage(results.getPageIndex() + 1); 
-                   // }
-                    
-                   console.log(s);
-                   that.list = s;
-                   console.log(that.list)
-                }
-            }
-        };
-          var local = new BMap.LocalSearch(map, options);
-          local.search(value);
-      }
+      window.map = map; //将map变量存储在全局
     },
-    mounted(){
-        this.init();
+    showpopup() {
+      this.show = !this.show;
+    },
+    search(value) {
+      var that = this;
+      var options = {
+        onSearchComplete: function(results) {
+          // 判断状态是否正确
+          if (local.getStatus() == BMAP_STATUS_SUCCESS) {
+            var s = [];
+            for (var i = 0; i < results.getCurrentNumPois(); i++) {
+              console.log(results);
+              s.push(
+                results.getPoi(i).city +
+                  "," +
+                  results.getPoi(i).address +
+                  ", " +
+                  results.getPoi(i).title
+              );
+            }
+            // if (results.getPageIndex() < results.getNumPages() - 1){
+            //   local.gotoPage(results.getPageIndex() + 1);
+            // }
+
+            console.log(s);
+            that.list = s;
+            console.log(that.list);
+          }
+        }
+      };
+      var local = new BMap.LocalSearch(map, options);
+      local.search(value);
     }
+  },
+  mounted() {
+    this.init();
   }
-  
+};
 </script>
 <style scoped>
 .map-select-address .address-form {
   text-align: left;
-    overflow-x: hidden;
-    overflow-y: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 .map-select-address .address-form .form-block {
-    background-color: #fff;
-    border-bottom: 1px solid #eee;
-    padding: 10px 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 10px 20px;
 }
 .map-select-address .address-form .form-block .item h4 {
-    margin: 0;
-    font-size: 14px;
-    color: #333;
+  margin: 0;
+  font-size: 14px;
+  color: #333;
 }
 .map-select-address .address-form .form-block .item p {
-    margin: 0;
-    font-size: 12px;
-    margin-top: 0;
-    color: #666;
+  margin: 0;
+  font-size: 12px;
+  margin-top: 0;
+  color: #666;
 }
 .map-select-address .address-form .form-block input {
-    width: 100%;
-    border: none;
-    outline: none;
-    font-size: 14px;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
 }
 .map-select-address .address-form .btn-block {
-    padding: 20px;
+  padding: 20px;
 }
 .map-select-address .address-form .btn-block button {
-    background-color: #f05c6d;
-    border-radius: 2px;
-    border: none;
-    width: 100%;
-    height: 40px;
-    font-size: 14px;
-    outline: none;
-    -webkit-appearance: button;
-    cursor: pointer;
-    text-transform: none;
-    overflow: visible;
-    color: #fff;
+  background-color: #f05c6d;
+  border-radius: 2px;
+  border: none;
+  width: 100%;
+  height: 40px;
+  font-size: 14px;
+  outline: none;
+  -webkit-appearance: button;
+  cursor: pointer;
+  text-transform: none;
+  overflow: visible;
+  color: #fff;
 }
 .popup-mask {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
-    background-color: rgba(0,0,0,0.5);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
 }
-.popup{
-  margin: 20px 20px 20px 20px ;
-   background-color: #fff;
-    width: 90%;
-    height: 90%;
-    border-radius: 4px;
-    position: relative;
-        z-index: 15;
+.popup {
+  margin: 20px 20px 20px 20px;
+  background-color: #fff;
+  width: 90%;
+  height: 90%;
+  border-radius: 4px;
+  position: relative;
+  z-index: 15;
 }
-.list-item{
-    text-align: left;
-    height: 36px;
-    line-height: 1;
-    font-size: 12px;
+.list-item {
+  text-align: left;
+  height: 36px;
+  line-height: 1;
+  font-size: 12px;
 }
-.list-item p{
-    margin-top: 14px;
-    margin-left: 20px;
+.list-item p {
+  margin-top: 14px;
+  margin-left: 20px;
 }
-.line{
-     border-top: 1px solid #e6e6e6;
+.line {
+  border-top: 1px solid #e6e6e6;
 }
-li{
-    list-style: none;
+li {
+  list-style: none;
 }
 .btn-box {
-    position: absolute;
-    bottom:30px;
-    left: 0;
-    right: 0;
-    height: 40px;
-    padding: 10px;
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  height: 40px;
+  padding: 10px;
 }
 .btn-box button:disabled {
-    background-color: #d8d8d8;
+  background-color: #d8d8d8;
 }
 .btn-box button {
-    background-color: #f05c6d;
-    border-radius: 2px;
-    border: none;
-    width: 100%;
-    height: 40px;
-    font-size: 14px;
-    color: #fff;
+  background-color: #f05c6d;
+  border-radius: 2px;
+  border: none;
+  width: 100%;
+  height: 40px;
+  font-size: 14px;
+  color: #fff;
 }
 .search-icon {
-    display: inline-block;
-    height: 14px;
-    width: 14px;
-    position: absolute;
-    top: 8px;
-    left: 14px;
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  top: 8px;
+  left: 14px;
 }
 .input-box {
-    background-color: #fff;
-    border-radius: 20px;
-    padding: 4px 10px;
-    line-height: 1;
-    position: relative;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 4px 10px;
+  line-height: 1;
+  position: relative;
 }
 .close {
-    width: 30px;
-    height: 30px;
-    display: inline-block;
-    position: absolute;
-    top: -14px;
-    right: -14px;
-    background: url(../../../static/close.png) no-repeat center;
-    background-size: 30px;
-    z-index: 1;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  background: url(../../../static/close.png) no-repeat center;
+  background-size: 30px;
+  z-index: 1;
 }
-.hidden{
-    display: none;
+.hidden {
+  display: none;
 }
-
-
 </style>
 

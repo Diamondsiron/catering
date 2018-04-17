@@ -59,101 +59,92 @@
   </div>
 </template>
 <script>
-export default{
-  name:'indent',
-  data(){
-    return{
-      value1:'2018-03-28'
-    }
+export default {
+  name: "indent",
+  data() {
+    return {
+      value1: "2018-03-28"
+    };
   },
-  components:{
-    'ShopCart': () => import('@/components/common/shopcart.vue'),
+  components: {
+    ShopCart: () => import("@/components/common/shopcart.vue")
   },
-  methods:{
-
-  },
-  mounted(){
-    
-  }
-
-  
-}
-  
+  methods: {},
+  mounted() {}
+};
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-header{
+header {
   width: 100%;
   height: 30px;
 }
 .bar-data .nav-lr {
-    height: 38px;
-    padding: 0 10px;
-    text-align: center;
-    font-size: 12px;
+  height: 38px;
+  padding: 0 10px;
+  text-align: center;
+  font-size: 12px;
 }
 .bar-data a {
-    display: inline-block;
-    font-size: 14px;
-    z-index: 20;
-    line-height: 38px;
-    color: #666;
+  display: inline-block;
+  font-size: 14px;
+  z-index: 20;
+  line-height: 38px;
+  color: #666;
 }
 .pull-right {
-    float: right;
+  float: right;
 }
 .pull-left {
-    float: left;
+  float: left;
 }
 .bar-data .title {
-    font-size: 12px;
-    display: inline-block;
-    padding: 3px 10px;
-    background-color: #e3e3e3;
-    border-radius: 2px;
-    margin-top: 7px;
+  font-size: 12px;
+  display: inline-block;
+  padding: 3px 10px;
+  background-color: #e3e3e3;
+  border-radius: 2px;
+  margin-top: 7px;
 }
-.context{
+.context {
   display: flex;
-  
 }
 .col-left {
-   flex: 0 0 80px;
-   width: 80px;
+  flex: 0 0 80px;
+  width: 80px;
 }
 .col-right {
-   flex:1;
+  flex: 1;
 }
-li{
-  list-style: none
+li {
+  list-style: none;
 }
-.bar-foodinfo-tab{
-  display: flex
+.bar-foodinfo-tab {
+  display: flex;
 }
-.col{
-  flex:1;
+.col {
+  flex: 1;
 }
-.food-comment-context>li{
-      border-bottom: 1px solid #999;
-    font-size: 12px;
-    padding-left: 40px;
-    position: relative;
-    padding-bottom: 10px;
-    color: #333;
-    text-align: left;
+.food-comment-context > li {
+  border-bottom: 1px solid #999;
+  font-size: 12px;
+  padding-left: 40px;
+  position: relative;
+  padding-bottom: 10px;
+  color: #333;
+  text-align: left;
 }
-.food-comment-context>li>img{
-    height: 30px;
-    width: 30px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    border-radius: 50%;
+.food-comment-context > li > img {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
 }
 .food-comment-context-user {
-    margin: 0;
-    margin-bottom: 5px;
-    color: #666;
+  margin: 0;
+  margin-bottom: 5px;
+  color: #666;
 }
-
 </style>

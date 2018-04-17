@@ -61,77 +61,80 @@
   </div>
 </template>
 <script>
-export default{
-  data(){
-    return{
-
-    }
+export default {
+  data() {
+    return {};
   },
-   components:{
-     'headers': () => import('@/components/common/headers.vue'),
-      'ShopCart': () => import('@/components/common/shopcart.vue'),
-     'datebar': () => import('@/components/common/datebar.vue')
+  components: {
+    headers: () => import("@/components/common/headers.vue"),
+    ShopCart: () => import("@/components/common/shopcart.vue"),
+    datebar: () => import("@/components/common/datebar.vue")
   },
-  methods:{
-    buy(){
-       this.$router.push({name:'orderform'})
+  methods: {
+    buy() {
+      this.$router.push({ name: "orderform" });
     }
   }
-
-}
-  
+};
 </script>
 <style scoped>
-.content{
-text-align: left;margin-left: 10px;
+.content {
+  text-align: left;
+  margin-left: 10px;
 }
-.content span{
-color: red; font-weight: bold;
+.content span {
+  color: red;
+  font-weight: bold;
 }
-.content s{
-color:rgb(153, 153, 153);margin-left: 5px;
+.content s {
+  color: rgb(153, 153, 153);
+  margin-left: 5px;
 }
-.radius{
-  border-radius: 5px;border: none;font-size: 14px; width: 40px;
+.radius {
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+  width: 40px;
 }
-.buy{
-   width:  90%;
-    border-radius:  5px;
-    border:  none;
-    background-color: yellow;
-    color: #333;
-
+.buy {
+  width: 90%;
+  border-radius: 5px;
+  border: none;
+  background-color: yellow;
+  color: #333;
 }
-.m0{
- margin: 0 auto;font-size: 14px;
+.m0 {
+  margin: 0 auto;
+  font-size: 14px;
 }
-.name{
-  font-size: 12px;text-align: left;
+.name {
+  font-size: 12px;
+  text-align: left;
 }
-header{
+header {
   display: flex;
   background-color: aqua;
   height: 40px;
 }
-.col-0{
-  flex:0,0,40px
+.col-0 {
+  flex: 0, 0, 40px;
 }
-.col-1{
+.col-1 {
   flex: 1;
   margin: 10px;
-  background-color: aqua
+  background-color: aqua;
 }
-.row{
+.row {
   display: flex;
 }
-.col{
+.col {
   flex: 1;
 }
 
-div{
-  background-color: #fff
+div {
+  background-color: #fff;
 }
-.p10{
+.p10 {
   padding: 10px 10px 10px 10px;
 }
 </style>

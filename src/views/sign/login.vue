@@ -28,6 +28,9 @@ export default{
   },
   components:{
     'Tabs': () => import('@/components/common/tabs.vue'),
+  },
+  methods:{
+      
   }
 }
   
@@ -78,7 +81,7 @@ button, input {
 }
 .form-box input {
     display: block;
-    height: 40px;
+ 
     width: 100%;
     color: #000;
     font-size: 14px;

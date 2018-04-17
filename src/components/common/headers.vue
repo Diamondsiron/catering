@@ -13,41 +13,37 @@
 
 <script>
 export default {
-  data(){
-    return{
-
-    }
+  data() {
+    return {};
   },
-  methods:{
-    index(){
-      this.$router.push({name:'index'})
+  methods: {
+    index() {
+      this.$router.push({ name: "index" });
     }
   }
-
-}
+};
 </script>
 
 <style scoped>
-header{
+header {
   display: flex;
   background: -webkit-linear-gradient(left, #f21111, #e56586);
   height: 40px;
 }
-.col-0{
-  flex:0,0,40px
+.col-0 {
+  flex: 0, 0, 40px;
 }
-.col-1{
+.col-1 {
   flex: 1;
   margin: 10px;
-
 }
-header div{
+header div {
   margin-top: 10px;
   margin-left: 15px;
   color: #fff;
 }
-.color_white{
-  color:#fff
+.color_white {
+  color: #fff;
 }
 </style>
 

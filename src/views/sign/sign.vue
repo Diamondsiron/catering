@@ -11,7 +11,7 @@
       </div>
       
       <div class="form-box">
-          <input type="text" placeholder="邀请码（选填）" class="" id="couponCode" name="couponCode">
+          <input type="text" placeholder="邀请码（选填）" class="h40" id="couponCode" name="couponCode">
       </div>
       
       <button class="btm-block">注册账号</button>
@@ -31,6 +31,9 @@ export default{
   },
   components:{
     'Tabs': () => import('@/components/common/tabs.vue'),
+  },
+  methods:{
+      
   }
 }
   
@@ -38,6 +41,9 @@ export default{
 <style scoped>
 .h41{
  height:41px
+}
+.h40{
+ height:40px
 }
 .h38{
 height:38px
@@ -72,7 +78,7 @@ button, input {
 }
 .form-box input {
     display: block;
-    height: 40px;
+   
     width: 100%;
     color: #000;
     font-size: 14px;
