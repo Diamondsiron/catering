@@ -16,7 +16,7 @@
     <div class="form-block form-block-margin-top">
         <h4 class="title">出生年份</h4>
         <div class="input-box">
-            <mu-date-picker hintText="1988-01-01" v-model="value" class="black-border w200"/> 
+            <mu-date-picker hintText="1988-01-01" v-model="value" class="black-border"/> 
            
         </div>
     </div>

@@ -25,8 +25,8 @@
             </CarouselItem>
         </Carousel>
       </div>
-      <div class="bar-index-quick-nav">
-          <div class="col" @click="attendance();">
+      <div class="bar-index-quick-nav" style="margin-top: 10px;">
+          <div class="col" @click="attendance();" style="border-right:2px solid #f2f2f2;">
            签到
           </div>
          
@@ -37,13 +37,13 @@
       </div>
     </div>
     
-    <div class="row">
+    <div class="row" style="margin-top: 10px;">
       <div style="flex:1;background-color:#fff" >
         <img src="http://weixin.yotafood.com/mobile/asset/imgs/recharge-guide.png?v=2" class="radius" >
       </div>
 
     </div>
-     <div class="row">
+     <div class="row" style="margin-top: 10px;">
       <div class="col-1" @click="list();">
       <img src="static/3.png" alt="">
       </div>
@@ -95,7 +95,7 @@ export default {
         return res;
       });
     },
-
+    
     async() {},
     bannershow() {
       this.$router.push({ name: "bannershow" });
